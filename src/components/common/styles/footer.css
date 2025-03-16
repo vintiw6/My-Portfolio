@@ -1,0 +1,28 @@
+@import "../../../data/styles.css";
+
+.footer {
+	display: flex;
+	padding-top: 25px;
+	margin-top: 50px;
+	padding-bottom: 25px;
+	align-items: center;
+	background-color: var(--bg-color);
+	color: var(--font-color);
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-nav-link-list a {
+	text-decoration: none;
+	color: var(--primary-color);
+}
+
+.footer-nav-link-list a:hover {
+	color: var(--link-color);
+}
+
+.footer-credits-text {
+	justify-content: flex-end;
+	color: var(--tertiary-color);
+	font-size: 14px;
+	text-align: right;
+}

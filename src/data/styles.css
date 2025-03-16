@@ -1,0 +1,85 @@
+/* ========== Global Styles (styles.css) ========== */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;700&display=swap");
+
+:root {
+	/* ===== Light Mode Colors ===== */
+	--font-color: #0f0f0f;
+	--bg-color: #fefefe;
+	--primary-color: #27272a;
+	--secondary-color: #575757;
+	--tertiary-color: #888888;
+	--link-color: #007bff;
+
+	/* ===== Light Mode Surface Colors ===== */
+	--clr-surface: #f5f5f5;
+	--clr-surface-tonal: #e0e0e0;
+
+	/* ===== Fonts ===== */
+	--primary-font: "JetBrains Mono", monospace;
+	--secondary-font: "Inter", sans-serif;
+}
+
+[data-theme="dark"] {
+	/* ===== Dark Mode Colors ===== */
+	--font-color: #ffffff;
+	--bg-color: #121212;
+	--primary-color: #970eb4;
+	--secondary-color: #dddddd;
+	--tertiary-color: #aaaaaa;
+	--link-color: #4da3ff;
+
+	/* ===== Dark Theme Primary Colors ===== */
+	--clr-primary-a0: #970eb4;
+	--clr-primary-a10: #a539bd;
+	--clr-primary-a20: #b255c5;
+	--clr-primary-a30: #be6fce;
+	--clr-primary-a40: #ca87d6;
+	--clr-primary-a50: #d69fdf;
+
+	/* ===== Dark Theme Surface Colors ===== */
+	--clr-surface: #2e3c3d;
+	--clr-surface-a10: #424f50;
+	--clr-surface-a20: #576364;
+	--clr-surface-a30: #6d7878;
+	--clr-surface-a40: #848d8d;
+	--clr-surface-a50: #9ba3a3;
+
+	/* ===== Dark Theme Tonal Surface Colors ===== */
+	--clr-surface-tonal: #3a3c48;
+	--clr-surface-tonal-a10: #4d4f5a;
+	--clr-surface-tonal-a20: #61636d;
+	--clr-surface-tonal-a30: #767780;
+	--clr-surface-tonal-a40: #8c8d94;
+	--clr-surface-tonal-a50: #a2a2a9;
+}
+
+/* ===== Text and Background Colors ===== */
+body {
+	background-color: var(--bg-color);
+	color: var(--font-color);
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+.content-wrapper {
+	background-color: var(
+		--bg-color
+	) !important; /* Ensures it matches the main page */
+	color: var(--font-color) !important; /* Ensures text remains visible */
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+.page-content::before,
+.page-content::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: calc((100% - 1200px) / 2);
+	background-color: var(--bg-color) !important; /* Matches main background */
+	transition: background-color 0.3s ease-in-out;
+	border: none !important; /* Removes any unwanted borders */
+	box-shadow: none !important; /* Removes any subtle shadow effect */
+}
+
+/* ===== Utility Class for Using Secondary Font ===== */
+.font-secondary {
+	font-family: var(--secondary-font);
+}

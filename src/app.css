@@ -1,0 +1,200 @@
+@import "/src/data/styles.css";
+
+/* ===== Scrollbar Styling ===== */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: var(--clr-surface-a10);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--clr-surface-a30);
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: var(--clr-surface-a50);
+}
+
+/* ===== Page Content ===== */
+.page-content {
+	background-color: var(--clr-bg);
+	position: relative;
+	color: var(--clr-text);
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page-content:before,
+.page-content:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: calc((100% - 1200px) / 2);
+	background-color: var(--clr-surface-a10);
+	border: 1px solid var(--clr-surface-a20);
+}
+
+.page-content:before {
+	left: 0;
+}
+
+.page-content:after {
+	right: 0;
+}
+
+/* ===== Content Wrapper ===== */
+.content-wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+/* ===== Typography ===== */
+.title {
+	color: var(--clr-primary);
+	font-family: var(--secondary-font);
+	font-size: 45px;
+	font-weight: 700;
+	width: 70%;
+}
+
+.subtitle {
+	padding-top: 10px;
+	color: var(--clr-secondary);
+	font-size: 16px;
+	line-height: 28px;
+	width: 70%;
+	margin-top: 25px;
+}
+
+/* ===== Page Footer ===== */
+.page-footer {
+	position: block;
+}
+
+.page-footer::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	border-top: 2px solid var(--clr-tertiary);
+}
+
+html {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	height: 100%;
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+	background: none;
+	background-color: var(--bg-color);
+	top: 150px;
+}
+
+:root {
+	--font-color: #0f0f0f;
+	--bg-color: #fefefe;
+}
+
+[data-theme="dark"] {
+	--font-color: #fefefe;
+	--bg-color: #121212;
+}
+
+/* Theme Toggle Container */
+.switch {
+	height: 100px;
+	position: fixed;
+	right: 50px;
+	top: 50px;
+}
+
+/* Toggle Switch */
+.theme-switch {
+	display: inline-block;
+	height: 40px; /* Increased height */
+	width: 80px; /* Longer width */
+	position: relative;
+}
+
+/* Hide Default Checkbox */
+.theme-switch input {
+	display: none;
+}
+
+/* Slider */
+.slider {
+	background-color: #ccc;
+	bottom: 0;
+	cursor: pointer;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: 0.4s;
+	border-radius: 34px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 10px;
+}
+
+/* Toggle Circle */
+.slider:before {
+	background-color: #fff;
+	bottom: 4px;
+	content: "";
+	height: 32px; /* Bigger to match new toggle */
+	width: 32px; /* Bigger to match new toggle */
+	left: 4px;
+	position: absolute;
+	transition: 0.4s;
+	border-radius: 50%;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Icons inside the toggle */
+.toggle-icon {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 18px; /* Slightly larger icons */
+	color: #fff;
+	transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Sun (Light Mode) */
+.sun-icon {
+	left: 10.5px; /* Adjusted for longer toggle */
+	color: #ffcc00;
+}
+
+/* Moon (Dark Mode) */
+.moon-icon {
+	right: 10.5px; /* Adjusted for longer toggle */
+	color: #4a90e2;
+	opacity: 0;
+}
+
+/* Move Toggle Circle & Adjust Icons on Dark Mode */
+input:checked + .slider {
+	background-color: #2b2b2b;
+}
+
+input:checked + .slider:before {
+	transform: translateX(40px); /* Adjusted for new width */
+}
+
+input:checked + .slider .sun-icon {
+	opacity: 0;
+}
+
+input:checked + .slider .moon-icon {
+	opacity: 1;
+}
