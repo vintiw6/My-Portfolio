@@ -32,19 +32,20 @@ This is my personal portfolio website, built with **React.js** and **styled-comp
 
 ## 📂 **Project Structure**  
 📦 vinayaks-portfolio
- ├── 📁 public # Static assets (favicon, images, icons)
- ├── 📁 src # Source code 
- │ ├── 📁 components # Reusable components 
- │ ├── 📁 pages # Main pages (Homepage, About, Projects, Contact) 
- │ ├── 📁 data # Data files (projects, SEO, user info) 
- │ ├── 📁 styles # Global stylesheets 
- │ ├── App.js # Main app component 
- │ ├── index.js # Entry point 
- │ └── ... (other files) 
- ├── .gitignore
- ├── package.json 
- ├── README.md # This file 
- └── ... (other project files)
+├── 📁 public                 # Static assets (favicon, images, icons)
+├── 📁 src                    # Source code
+│   ├── 📁 components         # Reusable components
+│   ├── 📁 pages              # Main pages (Homepage, About, Projects, Contact)
+│   ├── 📁 data               # Data files (projects, SEO, user info)
+│   ├── 📁 styles             # Global stylesheets
+│   ├── App.js                # Main app component
+│   ├── index.js              # Entry point
+│   └── ... (other files)
+├── .gitignore
+├── package.json
+├── README.md                 # This file
+└── ... (other project files)
+
 
 
 ---
