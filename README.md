@@ -64,6 +64,6 @@ cd portfolio
 
 📞 **Contact Me**
 
-📧 **Email**: vintiw667@gmail.com
-🌐 **LinkedIn**: linkedin.com/in/vintiw6
-🐙 **GitHub**: github.com/vintiw6
+- 📧 **Email**: vintiw667@gmail.com
+- 🌐 **LinkedIn**: linkedin.com/in/vintiw6
+- 🐙 **GitHub**: github.com/vintiw6
