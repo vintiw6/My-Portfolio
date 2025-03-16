@@ -31,6 +31,7 @@ This is my personal portfolio website, built with **React.js** and **styled-comp
 ---
 
 ## 📂 **Project Structure**  
+```
 vinayaks-portfolio
 ├── public                 # Static assets (favicon, images, icons)
 ├── src                    # Source code
@@ -45,7 +46,7 @@ vinayaks-portfolio
 ├── package.json
 ├── README.md              # This file
 └── ... (other project files)
-
+```
 
 
 
