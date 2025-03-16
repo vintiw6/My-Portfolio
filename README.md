@@ -12,12 +12,13 @@ This is my personal portfolio website, built with **React.js** and **styled-comp
 ---
 
 ## 📷 **Screenshots**  
+```
 ![image](https://github.com/user-attachments/assets/aac59ff3-683a-42cf-ab76-4ab077031054)
 
 ![image](https://github.com/user-attachments/assets/7fbcfe3a-f542-40df-915c-ce946a5b67a0)
 
 ![image](https://github.com/user-attachments/assets/96d3c90c-17fb-46b8-9746-5a2987649a6b)
-
+```
 
 ---
 
