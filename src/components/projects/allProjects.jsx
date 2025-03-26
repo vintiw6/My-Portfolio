@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import Project from "./project";
+import Project from './project';
 
-import INFO from "../../data/user";
+import INFO from '../../data/user';
 
-import "./styles/allProjects.css";
+import './styles/allProjects.css';
 
 const AllProjects = () => {
 	return (

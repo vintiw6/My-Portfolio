@@ -1,21 +1,33 @@
-import React from "react";
+import React from 'react';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
 
-import "./styles/project.css";
+import './styles/project.css';
 
 const Project = ({ logo, title, description, linkText, link }) => {
 	return (
 		<div className="project">
 			<a href={link} target="_blank" rel="noopener noreferrer">
 				<div className="project-container">
-					<div className="project-logo">
-						<img
-							src={logo}
-							alt={`${title} Logo`}
-							className="project-logo-img"
-						/>
+					{/* ✅ Wrap logos in a flex container */}
+					<div className="project-logos">
+						{Array.isArray(logo) ? (
+							logo.map((logoSrc, index) => (
+								<img
+									key={index}
+									src={logoSrc}
+									alt={`${title} Logo ${index + 1}`}
+									className="project-logo-img"
+								/>
+							))
+						) : (
+							<img
+								src={logo}
+								alt={`${title} Logo`}
+								className="project-logo-img"
+							/>
+						)}
 					</div>
 					<div className="project-title">{title}</div>
 					<div className="project-description">{description}</div>
