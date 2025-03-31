@@ -80,7 +80,7 @@ const INFO = {
 				'/TypeScript.svg',
 				'/React-Dark.svg',
 				'/MongoDB.svg',
-				'/NodeJS.svg',
+				'/NodeJS-Dark.svg',
 			],
 			linkText: 'View Project',
 			link: 'https://dessert-haven-website.vercel.app/',
