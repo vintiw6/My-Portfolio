@@ -12,23 +12,21 @@ const INFO = {
 		linkedin: 'https://linkedin.com/vintiw6',
 		instagram: 'https://instagram.com/vintiw5',
 	},
-
 	homepage: {
 		title: 'Aspiring Data Scientist & Software Developer',
 		description:
-			'I am a passionate Computer Science Engineering (Data Science) student with a strong foundation in Python, C++, and software development. My expertise includes building scalable applications, data analysis, and AI-driven solutions. I enjoy solving complex problems, optimizing algorithms, and continuously expanding my knowledge in the field of technology.',
+			'CSE (Data Science) student skilled in Python, C++, and software development. Building scalable apps and AI solutions.',
 	},
 
 	about: {
 		title: 'I’m Vinayak Tiwari, a tech enthusiast shaping the future with code.',
 		description:
-			'As a Computer Science Engineering (Data Science) student, I have worked on diverse projects, including slot machine simulations in Python, smart finance trackers, and credit card validation tools. My passion for data science and software engineering drives me to explore new technologies, contribute to open-source projects, and continuously enhance my skill set. I strongly believe in collaboration and innovation, and I am always open to learning and sharing knowledge.',
+			'Computer Science (Data Science) student with project experience in Python and a passion for innovation.',
 	},
-
 	articles: {
 		title: 'Exploring the World of Data Science, AI, and Software Development',
 		description:
-			'A collection of my thoughts, projects, and insights into data science, AI, software development, and engineering. I love writing about emerging technologies, coding best practices, and problem-solving techniques.',
+			'My insights and projects in data science, AI, and software development.',
 	},
 
 	projects: [
@@ -70,7 +68,22 @@ const INFO = {
 				'A weather forecast web app fetching real-time weather data.',
 			logo: ['/css.svg', '/html.svg', '/js.svg'],
 			linkText: 'View Project',
-			link: 'https://github.com/vintiw6/Projects/tree/main/Weather-App',
+			link: 'https://vintiw6-weather-app.vercel.app/',
+		},
+		{
+			title: 'Dessert Haven Website',
+			description:
+				'A full-stack website for a dessert restaurant, featuring a menu, ordering system, and user authentication.',
+			logo: [
+				'/html.svg',
+				'/css.svg',
+				'/TypeScript.svg',
+				'/React-Dark.svg',
+				'/MongoDB.svg',
+				'/Nodejs.svg',
+			],
+			linkText: 'View Project',
+			link: 'https://dessert-haven-website.vercel.app/',
 		},
 	],
 };
