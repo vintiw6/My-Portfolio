@@ -21,7 +21,7 @@ const INFO = {
 	about: {
 		title: 'I’m Vinayak Tiwari, a tech enthusiast shaping the future with code.',
 		description:
-			'Computer Science (Data Science) student with project experience in Python and a passion for innovation.',
+			'A Computer Science (Data Science) student with hands-on project experience in Python, specializing in data analysis, machine learning, and software development. Passionate about innovation, problem-solving, and leveraging technology to create impactful solutions.',
 	},
 	articles: {
 		title: 'Exploring the World of Data Science, AI, and Software Development',
@@ -31,41 +31,9 @@ const INFO = {
 
 	projects: [
 		{
-			title: 'CreditCard Validator',
-			description:
-				'A tool to validate credit card numbers using the Luhn algorithm.',
-			logo: ['/c++.svg'], // ✅ Correct C++ Logo
-			linkText: 'View Project',
-			link: 'https://github.com/vintiw6/Projects/tree/main/CreditCard-Validator',
-		},
-		{
-			title: 'Data Analysis Basics',
-			description:
-				'Basic data analysis projects demonstrating fundamental data processing techniques.',
-			logo: ['/python.svg'], // ✅ Python Logo
-			linkText: 'View Project',
-			link: 'https://github.com/vintiw6/Projects/tree/main/DataAnalysis-Basic',
-		},
-		{
-			title: 'Slot Machine',
-			description:
-				'A simple slot machine game simulation implemented in Python.',
-			logo: ['/python.svg'], // ✅ Python Logo
-			linkText: 'View Project',
-			link: 'https://github.com/vintiw6/Projects/tree/main/SlotMachine',
-		},
-		{
-			title: 'Smart Finance Tracker',
-			description:
-				'A smart finance tracker to monitor and manage personal expenses.',
-			logo: ['/python.svg'], // ✅ Python Logo
-			linkText: 'View Project',
-			link: 'https://github.com/vintiw6/Projects/tree/main/SmartFinanceTracker',
-		},
-		{
 			title: 'Weather App',
 			description:
-				'A weather forecast web app fetching real-time weather data.',
+				'A web app that provides real-time weather forecasts by fetching live weather data.',
 			logo: ['/css.svg', '/html.svg', '/js.svg'],
 			linkText: 'View Project',
 			link: 'https://vintiw6-weather-app.vercel.app/',
@@ -84,6 +52,39 @@ const INFO = {
 			],
 			linkText: 'View Project',
 			link: 'https://dessert-haven-website.vercel.app/',
+		},
+		{
+			title: 'Slot Machine',
+			description:
+				'A simple slot machine game simulation implemented in Python.',
+			logo: ['/python.svg'], // ✅ Python Logo
+			linkText: 'View Project',
+			link: 'https://github.com/vintiw6/Projects/tree/main/SlotMachine',
+		},
+		{
+			title: 'CreditCard Validator',
+			description:
+				'A tool to validate credit card numbers using the Luhn algorithm.',
+			logo: ['/c++.svg'], // ✅ Correct C++ Logo
+			linkText: 'View Project',
+			link: 'https://github.com/vintiw6/Projects/tree/main/CreditCard-Validator',
+		},
+		{
+			title: 'Data Analysis Basics',
+			description:
+				'Basic data analysis projects demonstrating fundamental data processing techniques.',
+			logo: ['/python.svg'], // ✅ Python Logo
+			linkText: 'View Project',
+			link: 'https://github.com/vintiw6/Projects/tree/main/DataAnalysis-Basic',
+		},
+
+		{
+			title: 'Smart Finance Tracker',
+			description:
+				'A smart finance tracker to monitor and manage personal expenses.',
+			logo: ['/python.svg'], // ✅ Python Logo
+			linkText: 'View Project',
+			link: 'https://github.com/vintiw6/Projects/tree/main/SmartFinanceTracker',
 		},
 	],
 };
