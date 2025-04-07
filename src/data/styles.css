@@ -1,5 +1,5 @@
 /* ========== Global Styles (styles.css) ========== */
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;700&display=swap');
 
 :root {
 	/* ===== Light Mode Colors ===== */
@@ -15,11 +15,11 @@
 	--clr-surface-tonal: #e0e0e0;
 
 	/* ===== Fonts ===== */
-	--primary-font: "JetBrains Mono", monospace;
-	--secondary-font: "Inter", sans-serif;
+	--primary-font: 'JetBrains Mono', monospace;
+	--secondary-font: 'Inter', sans-serif;
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
 	/* ===== Dark Mode Colors ===== */
 	--font-color: #ffffff;
 	--bg-color: #121212;
@@ -59,6 +59,10 @@ body {
 	color: var(--font-color);
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
+.main-content {
+	min-height: calc(100vh - 100px);
+}
+
 .content-wrapper {
 	background-color: var(
 		--bg-color
@@ -68,7 +72,7 @@ body {
 }
 .page-content::before,
 .page-content::after {
-	content: "";
+	content: '';
 	position: absolute;
 	top: 0;
 	bottom: 0;
