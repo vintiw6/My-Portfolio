@@ -1,23 +1,49 @@
-/* All Projects Grid */
+/* Projects Grid Styles */
 .all-projects-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 2rem;
-	width: 90%; /* 👈 Important to center it */
+	width: 90%;
+	max-width: 1400px; /* Added to prevent too wide layout on large screens */
 	padding: 2rem;
-	margin-top: 160px; /* 👈 Push down so it doesn't hide behind logos */
+	margin: 160px auto 2rem; /* Changed to auto for horizontal centering */
 }
 
 .all-projects-project {
 	background: rgba(255, 255, 255, 0.1);
-	backdrop-filter: none;
+	border-radius: 1rem; /* Added for consistency with other project cards */
+	transition: all 0.3s ease-in-out; /* Added for consistency */
+}
+
+.all-projects-project:hover {
+	background: rgba(255, 255, 255, 0.2); /* Added for consistency */
+	transform: translateY(-5px); /* Added for consistency */
+}
+
+@media (max-width: 992px) {
+	.all-projects-container {
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		width: 95%;
+	}
+}
+
+@media (max-width: 768px) {
+	.all-projects-container {
+		margin-top: 140px;
+		padding: 1.5rem;
+		gap: 1.5rem;
+	}
 }
 
 @media (max-width: 600px) {
 	.all-projects-container {
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		padding: 1rem;
 		gap: 1rem;
+		width: 100%;
+		margin-top: 100px;
 	}
+
 	.all-projects-project {
 		padding: 1rem;
 	}

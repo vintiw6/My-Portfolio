@@ -1,7 +1,10 @@
+/* Projects Header Styles */
 .projects-logo-container {
 	display: flex;
 	justify-content: flex-start;
 	padding-top: 25px;
+	position: relative; /* Added to establish positioning context */
+	z-index: 1000; /* Added to ensure proper stacking */
 }
 
 .projects-logo {
@@ -13,17 +16,23 @@
 	top: 4vh;
 	z-index: 999;
 	gap: 8px;
+	background: var(
+		--background-color,
+		#121212
+	); /* Added for better visibility */
+	padding: 8px; /* Added for better spacing */
 }
 
 .project-logos {
 	display: flex;
 	gap: 10px;
-	align-items: center; /* 👈 Corrected */
+	align-items: center;
 }
 
 .project-logos img {
 	height: 35px;
 	width: 35px;
+	object-fit: contain; /* Added to maintain aspect ratio */
 }
 
 .projects-container {
@@ -32,10 +41,35 @@
 	height: 100%;
 	margin: 0;
 	padding-top: 120px;
+	position: relative; /* Added to establish positioning context */
+}
+
+@media (max-width: 768px) {
+	.projects-container {
+		padding-top: 90px;
+	}
+
+	.projects-logo {
+		top: 3vh;
+	}
+
+	.project-logos img {
+		height: 30px;
+		width: 30px;
+	}
 }
 
 @media (max-width: 600px) {
 	.projects-container {
 		padding-top: 60px;
+	}
+
+	.projects-logo {
+		top: 2vh;
+	}
+
+	.project-logos img {
+		height: 25px;
+		width: 25px;
 	}
 }
