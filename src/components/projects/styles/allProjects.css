@@ -11,22 +11,6 @@
 .all-projects-project {
 	background: rgba(255, 255, 255, 0.1);
 	backdrop-filter: none;
-	-webkit-backdrop-filter: none;
-	padding: 15px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	transition: all 0.3s ease-in-out;
-
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start; /* Align text left */
-	justify-content: space-between;
-
-	min-height: 250px;
-	height: 250px;
-	width: 100%;
-
-	overflow: hidden;
-	border-radius: 1rem;
 }
 
 @media (max-width: 600px) {
