@@ -23,11 +23,6 @@ const INFO = {
 		description:
 			'A Computer Science (Data Science) student with hands-on project experience in Python, specializing in data analysis, machine learning, and software development. Passionate about innovation, problem-solving, and leveraging technology to create impactful solutions.',
 	},
-	articles: {
-		title: 'Exploring the World of Data Science, AI, and Software Development',
-		description:
-			'My insights and projects in data science, AI, and software development.',
-	},
 
 	projects: [
 		{

@@ -1,22 +1,22 @@
-import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 
-import NavBar from "../components/common/navBar";
-import Footer from "../components/common/footer";
-import Logo from "../components/common/logo";
-import Socials from "../components/about/socials";
+import NavBar from '../components/common/navBar';
+import Footer from '../components/common/footer';
+import Logo from '../components/common/logo';
+import Socials from '../components/about/socials';
 
-import INFO from "../data/user";
-import SEO from "../data/seo";
+import INFO from '../data/user';
+import SEO from '../data/seo';
 
-import "./styles/contact.css";
+import './styles/contact.css';
 
 const Contact = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
-	const currentSEO = SEO.find((item) => item.page === "contact");
+	const currentSEO = SEO.find((item) => item.page === 'contact');
 
 	return (
 		<React.Fragment>
@@ -25,7 +25,7 @@ const Contact = () => {
 				<meta name="description" content={currentSEO.description} />
 				<meta
 					name="keywords"
-					content={currentSEO.keywords.join(", ")}
+					content={currentSEO.keywords.join(', ')}
 				/>
 			</Helmet>
 
@@ -62,8 +62,8 @@ const Contact = () => {
 								LinkedIn
 							</a>
 							, where I share insights and updates about my work
-							in **data science, software development, and
-							engineering**. Looking forward to hearing from you!
+							in data science, software development, and
+							engineering. Looking forward to hearing from you!
 						</div>
 					</div>
 
