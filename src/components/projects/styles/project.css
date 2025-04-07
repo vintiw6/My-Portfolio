@@ -6,6 +6,7 @@
 	-webkit-backdrop-filter: blur(10px);
 	padding: 15px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 12px; /* ✅ Rounded corners for consistency */
 	transition: all 0.3s ease-in-out;
 
 	display: flex;
@@ -22,7 +23,8 @@
 
 .project:hover {
 	background: rgba(255, 255, 255, 0.2);
-	transform: translateY(-5px); /* ✅ Slight lift on hover */
+	transform: translateY(-5px); /* ✅ Nice lift effect */
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* ✅ Extra hover shadow */
 }
 
 .project a {
@@ -37,7 +39,7 @@
 .project-container {
 	width: 100%;
 	height: 100%;
-	border-radius: inherit; /* ✅ Inherit border shape */
+	border-radius: inherit; /* ✅ Inherit rounded corners */
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -45,10 +47,13 @@
 
 .project-logo {
 	width: 30px;
+	margin-bottom: 10px;
 }
 
 .project-logo img {
 	width: 100%;
+	height: auto;
+	object-fit: contain;
 }
 
 .project-title {
@@ -56,34 +61,53 @@
 	color: var(--primary-color);
 	font-size: 16px;
 	padding-top: 15px;
-	margin-bottom: 1em;
+	margin-bottom: 0.75em;
 	font-weight: 700;
+	text-align: center;
 }
 
 .project-description {
 	color: var(--secondary-color);
+	font-size: 14px;
+	text-align: center;
+	line-height: 1.4;
+	padding: 0 10px;
 }
 
 .project-link {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	color: var(--secondary-color);
 	font-size: 12px;
 	padding-top: 20px;
+	gap: 8px;
+	transition: color 0.3s ease;
 }
 
 .project-link-icon {
-	padding-left: 5px;
-	font-size: 13px;
+	font-size: 14px;
 }
 
 .project-link-text {
-	padding-left: 20px;
 	font-weight: 700;
 }
 
 @media (max-width: 600px) {
 	.project {
-		height: 300px;
+		height: 280px; /* ✅ Slightly smaller and cleaner on mobile */
+	}
+
+	.project-description {
+		font-size: 13px; /* ✅ Slightly smaller text for better fit */
+		padding: 0 5px;
+	}
+
+	.project-title {
+		font-size: 15px;
+	}
+
+	.project-link {
+		font-size: 11px;
 	}
 }
