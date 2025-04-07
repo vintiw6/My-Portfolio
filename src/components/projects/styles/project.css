@@ -1,14 +1,14 @@
 .project {
 	background: rgba(255, 255, 255, 0.1);
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
 	padding: 15px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	transition: all 0.3s ease-in-out;
 
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start; /* 👈 Align left */
+	align-items: flex-start;
 	justify-content: space-between;
 
 	min-height: 250px;
@@ -53,37 +53,53 @@
 .project-title {
 	font-family: var(--secondary-font);
 	color: var(--primary-color);
-	font-size: 16px;
-	padding-top: 15px;
-	margin-bottom: 1em;
+	font-size: 1rem; /* Changed to relative unit for smoother scaling */
+	padding-top: 1rem;
+	margin-bottom: 1rem;
 	font-weight: 700;
 }
 
 .project-description {
 	color: var(--secondary-color);
-	text-align: left; /* 👈 Ensure text is left-aligned */
+	text-align: left;
+	font-size: 0.9rem; /* 👈 Added for better mobile readability */
+	line-height: 1.5; /* 👈 Added for smoother text flow */
 }
 
 .project-link {
 	display: flex;
 	align-items: center;
 	color: var(--secondary-color);
-	font-size: 12px;
-	padding-top: 20px;
+	font-size: 0.8rem;
+	padding-top: 1.25rem;
 }
 
 .project-link-icon {
-	padding-left: 5px;
-	font-size: 13px;
+	padding-left: 0.5rem;
+	font-size: 1rem;
 }
 
 .project-link-text {
-	padding-left: 20px;
+	padding-left: 1rem;
 	font-weight: 700;
 }
 
 @media (max-width: 600px) {
 	.project {
-		height: 300px;
+		min-height: 280px;
+		height: auto; /* 👈 Allow flexible height for content */
+		padding: 1rem;
+	}
+
+	.project-title {
+		font-size: 1rem;
+	}
+
+	.project-description {
+		font-size: 0.85rem;
+	}
+
+	.project-link {
+		font-size: 0.75rem;
 	}
 }
