@@ -1,35 +1,33 @@
 .all-projects-container {
 	display: grid;
-	grid-template-columns: repeat(
-		auto-fit,
-		minmax(280px, 1fr)
-	); /* slightly lower min width for better fit */
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 2rem;
 	padding: 2rem;
-	max-width: 1200px; /* ✅ limits the container size on large screens */
-	margin: 0 auto; /* ✅ centers it */
 }
 
 .all-projects-project {
-	background-color: var(--clr-surface); /* your theme background */
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 	border-radius: 1rem;
 	padding: 1.5rem;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* slightly softer shadow */
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, background 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start; /* 👈 Align left */
 }
 
 .all-projects-project:hover {
-	transform: translateY(-8px); /* little higher pop */
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* stronger shadow on hover */
+	background: rgba(255, 255, 255, 0.2);
+	transform: translateY(-5px);
 }
 
-/* Mobile responsive tweak */
 @media (max-width: 600px) {
 	.all-projects-container {
 		padding: 1rem;
-		gap: 1.5rem;
+		gap: 1rem;
 	}
-
 	.all-projects-project {
 		padding: 1rem;
 	}

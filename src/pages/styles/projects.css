@@ -7,55 +7,35 @@
 .projects-logo {
 	display: flex;
 	position: fixed;
-	top: 4vh;
-	left: 2vw; /* ✅ Added so it doesn’t stick weirdly */
 	border: 1px solid white;
 	border-radius: 50%;
-	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-	background-color: var(
-		--clr-surface
-	); /* ✅ to make sure bg is visible in dark mode too */
-	padding: 8px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+	top: 4vh;
 	z-index: 999;
+	gap: 8px;
 }
 
 .project-logos {
 	display: flex;
 	gap: 10px;
-	align-items: center; /* ✅ fixed "left" because align-items expects center/normal values */
+	align-items: center; /* 👈 Corrected */
 }
 
 .project-logos img {
 	height: 35px;
 	width: 35px;
-	object-fit: cover;
 }
 
 .projects-container {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	width: 100%;
-	margin: 0 auto;
+	margin: 0;
 	padding-top: 120px;
 }
 
 @media (max-width: 600px) {
 	.projects-container {
-		padding-top: 80px; /* slight padding at top on mobile */
-	}
-
-	.project-logos img {
-		height: 28px; /* smaller logos on mobile */
-		width: 28px;
-	}
-
-	.projects-logo {
-		top: 2vh; /* bring logos higher on smaller screens */
-		left: 2vw;
-	}
-
-	.projects-container {
-		padding: 1rem;
+		padding-top: 60px;
 	}
 }
