@@ -10,15 +10,15 @@
 
 .all-projects-project {
 	background: rgba(255, 255, 255, 0.1);
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
 	padding: 15px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	transition: all 0.3s ease-in-out;
 
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start; /* 👈 Align left */
+	align-items: flex-start; /* Align text left */
 	justify-content: space-between;
 
 	min-height: 250px;
@@ -27,11 +27,6 @@
 
 	overflow: hidden;
 	border-radius: 1rem;
-}
-
-.all-projects-project:hover {
-	background: rgba(255, 255, 255, 0.2);
-	transform: translateY(-5px);
 }
 
 @media (max-width: 600px) {
