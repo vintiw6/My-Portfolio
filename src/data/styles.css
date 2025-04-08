@@ -19,6 +19,20 @@
 	--secondary-font: 'Inter', sans-serif;
 }
 
+/* ===== Dark Mode Colors ===== */
+[data-theme='dark'] {
+	--font-color: #f5f7fa;
+	--bg-color: #0f1117;
+	--primary-color: #1e293b; /* Dark blue-gray */
+	--secondary-color: #334155; /* Softer dark blue */
+	--tertiary-color: #64748b; /* Muted slate */
+	--link-color: #3b82f6; /* Soft blue */
+
+	/* ===== Dark Mode Surface Colors ===== */
+	--clr-surface: #1a1c23;
+	--clr-surface-tonal: #2c2f36;
+}
+
 /* ===== Text and Background Colors ===== */
 body {
 	background-color: var(--bg-color);
