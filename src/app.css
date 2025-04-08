@@ -4,16 +4,13 @@
 ::-webkit-scrollbar {
 	width: 10px;
 }
-
 ::-webkit-scrollbar-track {
 	background-color: var(--clr-surface-a10);
 }
-
 ::-webkit-scrollbar-thumb {
 	background-color: var(--clr-surface-a30);
 	border-radius: 5px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
 	background-color: var(--clr-surface-a50);
 }
@@ -25,7 +22,6 @@
 	color: var(--clr-text);
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 .page-content:before,
 .page-content:after {
 	content: '';
@@ -36,11 +32,9 @@
 	background-color: var(--clr-surface-a10);
 	border: 1px solid var(--clr-surface-a20);
 }
-
 .page-content:before {
 	left: 0;
 }
-
 .page-content:after {
 	right: 0;
 }
@@ -59,7 +53,6 @@
 	font-weight: 700;
 	width: 70%;
 }
-
 .subtitle {
 	padding-top: 10px;
 	color: var(--clr-secondary);
@@ -73,7 +66,6 @@
 .page-footer {
 	position: block;
 }
-
 .page-footer::before {
 	content: '';
 	position: absolute;
@@ -82,11 +74,10 @@
 	border-top: 2px solid var(--clr-tertiary);
 }
 
+/* ===== HTML Defaults ===== */
 html {
 	padding-top: 100px;
 	padding-bottom: 100px;
-	height: 100%;
-	overflow: hidden;
 	width: 100vw;
 	height: 100vh;
 	overflow-y: scroll;
@@ -94,9 +85,10 @@ html {
 	-webkit-overflow-scrolling: touch;
 	background: none;
 	background-color: var(--bg-color);
-	top: 150px;
+	color: var(--font-color);
 }
 
+/* ===== Light and Dark Mode Variables ===== */
 :root {
 	--font-color: #0f0f0f;
 	--bg-color: #fefefe;
@@ -107,7 +99,7 @@ html {
 	--bg-color: #121212;
 }
 
-/* Theme Toggle Container */
+/* ===== Theme Toggle Container ===== */
 .switch {
 	height: 100px;
 	position: fixed;
@@ -128,9 +120,9 @@ html {
 	display: none;
 }
 
-/* Slider */
+/* ===== Toggle Slider ===== */
 .slider {
-	background-color: #ccc;
+	background-color: #ccc; /* Light mode slider background */
 	position: absolute;
 	inset: 0;
 	cursor: pointer;
@@ -142,7 +134,7 @@ html {
 	padding: 0 10px;
 }
 
-/* Toggle Circle */
+/* Slider Knob */
 .slider:before {
 	content: '';
 	position: absolute;
@@ -156,7 +148,7 @@ html {
 	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Icons inside the toggle */
+/* Icons Inside Toggle */
 .toggle-icon {
 	position: absolute;
 	top: 50%;
@@ -167,22 +159,22 @@ html {
 	pointer-events: none;
 }
 
-/* Sun (Light Mode) */
+/* Sun Icon (Light Mode) */
 .sun-icon {
 	left: 10.5px;
-	color: #ffcc00; /* Golden Yellow from second block */
+	color: #ffcc00; /* Golden Yellow */
 }
 
-/* Moon (Dark Mode) */
+/* Moon Icon (Dark Mode) */
 .moon-icon {
 	right: 10.5px;
-	color: #4a90e2; /* Blue from second block */
+	color: #4a90e2; /* Blue */
 	opacity: 0;
 }
 
-/* Dark Mode */
+/* ====== When Checkbox Checked (Dark Mode Active) ====== */
 input:checked + .slider {
-	background-color: #2b2b2b; /* Dark background from second block */
+	background-color: #2b2b2b; /* Dark slider background */
 }
 
 input:checked + .slider:before {
@@ -204,25 +196,20 @@ input:checked + .slider .moon-icon {
 		top: 20px;
 		height: 80px;
 	}
-
 	.theme-switch {
 		width: 65px;
 		height: 32px;
 	}
-
 	.slider {
 		padding: 0 8px;
 	}
-
 	.slider:before {
 		height: 26px;
 		width: 26px;
 	}
-
 	.toggle-icon {
 		font-size: 16px;
 	}
-
 	input:checked + .slider:before {
 		transform: translateX(32px);
 	}
