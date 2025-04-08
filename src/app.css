@@ -113,7 +113,6 @@ html {
 	position: fixed;
 	right: 50px;
 	top: 50px;
-	z-index: 999;
 }
 
 /* Toggle Switch */
@@ -171,19 +170,19 @@ html {
 /* Sun (Light Mode) */
 .sun-icon {
 	left: 10.5px;
-	color: #ffd700; /* Golden yellow */
+	color: #ffcc00; /* Golden Yellow from second block */
 }
 
 /* Moon (Dark Mode) */
 .moon-icon {
 	right: 10.5px;
-	color: #708090; /* Slate gray */
+	color: #4a90e2; /* Blue from second block */
 	opacity: 0;
 }
 
 /* Dark Mode */
 input:checked + .slider {
-	background-color: #1e1e1e; /* Dark gray-black background */
+	background-color: #2b2b2b; /* Dark background from second block */
 }
 
 input:checked + .slider:before {
