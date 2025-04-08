@@ -21,16 +21,16 @@
 
 /* ===== Dark Mode Colors ===== */
 [data-theme='dark'] {
-	--font-color: #f5f7fa;
-	--bg-color: #0f1117;
+	--font-color: #f8fafc; /* Brighter text */
+	--bg-color: #0d0f14; /* Slightly darker background */
 	--primary-color: #1e293b; /* Dark blue-gray */
-	--secondary-color: #334155; /* Softer dark blue */
-	--tertiary-color: #64748b; /* Muted slate */
-	--link-color: #3b82f6; /* Soft blue */
+	--secondary-color: #3b4758; /* Softer dark blue, more contrast */
+	--tertiary-color: #7b8aa1; /* Lighter muted slate */
+	--link-color: #60a5fa; /* Brighter blue for links */
 
 	/* ===== Dark Mode Surface Colors ===== */
-	--clr-surface: #1a1c23;
-	--clr-surface-tonal: #2c2f36;
+	--clr-surface: #16181d; /* Dark surface */
+	--clr-surface-tonal: #2b2e35; /* Mid-dark surface */
 }
 
 /* ===== Text and Background Colors ===== */
