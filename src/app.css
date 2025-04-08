@@ -198,6 +198,7 @@ input:checked + .slider .sun-icon {
 input:checked + .slider .moon-icon {
 	opacity: 1;
 }
+
 .toggle-container {
 	display: flex;
 	justify-content: flex-end; /* or center depending on design */
