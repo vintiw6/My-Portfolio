@@ -58,11 +58,10 @@ This project is deployed using **Vercel**. For automatic deployment, push update
 
 ---
 
-```
+
 ## 🙋‍♂️ Author
 
 **Vinayak Tiwari**
 
 ---
-```
 
