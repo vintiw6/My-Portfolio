@@ -58,16 +58,11 @@ This project is deployed using **Vercel**. For automatic deployment, push update
 
 ---
 
+```
 ## 🙋‍♂️ Author
 
 **Vinayak Tiwari**
 
 ---
-
-
-
 ```
 
----
-
-Let me know if you'd like to add a custom preview image, update tech stack (like if it's made with React or vanilla HTML/CSS/JS), or include social links!# My-Portfolio
