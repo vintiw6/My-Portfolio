@@ -10,7 +10,7 @@ This is a personal portfolio website built to showcase my skills, projects, and 
 ## 📸 Screenshots
 
 
-[image](https://github.com/user-attachments/assets/cd8198a6-fe30-4378-a345-2ac1435ca2ff)
+![image](https://github.com/user-attachments/assets/cd8198a6-fe30-4378-a345-2ac1435ca2ff)
 
 ---
 
