@@ -170,8 +170,19 @@ contactForm.addEventListener('submit', (e) => {
 // Project data
 const projects = [
     {
+        title: "CitizenAlert",
+        description: "Community emergency alert system with real-time notifications and interactive maps.",
+        technologies: [
+            { name: "React", icon: "devicon-react-original colored" },
+            { name: "TypeScript", icon: "devicon-typescript-plain colored" },
+            { name: "Firebase", icon: "devicon-firebase-plain colored" },
+            { name: "Gemini AI", icon: "devicon-google-plain colored" }
+        ],
+        github: "https://github.com/moksh5042/CitizenAlert"
+    },
+    {
         title: "Dessert Haven Website",
-        description: "Full-stack dessert recipe platform with user authentication and interactive features",
+        description: "Full-stack dessert recipe platform with user authentication and interactive features.",
         technologies: [
             { name: "React", icon: "devicon-react-original colored" },
             { name: "MongoDB", icon: "devicon-mongodb-plain colored" },
@@ -185,7 +196,7 @@ const projects = [
     },
     {
         title: "Weather App",
-        description: "Real-time weather forecasts with location-based data",
+        description: "Real-time weather forecasts with location-based data and interactive maps.",
         technologies: [
             { name: "JavaScript", icon: "devicon-javascript-plain colored" },
             { name: "HTML5", icon: "devicon-html5-plain colored" },
@@ -196,7 +207,7 @@ const projects = [
     },
     {
         title: "Credit Card Validator",
-        description: "Secure credit card validation system",
+        description: "Secure credit card validation system using Luhn's algorithm.",
         technologies: [
             { name: "C++", icon: "devicon-cplusplus-plain colored" }
         ],
@@ -204,7 +215,7 @@ const projects = [
     },
     {
         title: "Data Analysis Projects",
-        description: "Data visualization and statistical analysis",
+        description: "Data visualization and statistical analysis with Python and Jupyter.",
         technologies: [
             { name: "Python", icon: "devicon-python-plain colored" },
             { name: "Jupyter", icon: "devicon-jupyter-plain colored" }
@@ -251,7 +262,6 @@ function createProjectCards() {
         
         projectLinks.appendChild(githubLink);
         
-        // Only add demo link if it exists
         if (project.demo) {
             const demoLink = document.createElement('a');
             demoLink.href = project.demo;
