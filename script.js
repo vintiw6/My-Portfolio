@@ -178,7 +178,8 @@ const projects = [
             { name: "Firebase", icon: "devicon-firebase-plain colored" },
             { name: "Gemini AI", icon: "devicon-google-plain colored" }
         ],
-        github: "https://github.com/moksh5042/CitizenAlert"
+        github: "https://github.com/moksh5042/CitizenAlert",
+        demo: "https://citizen-alert-git-main-mokshs-projects-45b64e72.vercel.app/"
     },
     {
         title: "Dessert Haven Website",
