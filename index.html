@@ -21,10 +21,10 @@
     <nav class="navbar">
         <div class="nav-container">
             <ul class="nav-links">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link" title="Home"><i class="fas fa-home"></i></a></li>
+                <li><a href="#about" class="nav-link" title="About"><i class="fas fa-user"></i></a></li>
+                <li><a href="#projects" class="nav-link" title="Projects"><i class="fas fa-project-diagram"></i></a></li>
+                <li><a href="#contact" class="nav-link" title="Contact"><i class="fas fa-envelope"></i></a></li>
             </ul>
         </div>
     </nav>
@@ -35,15 +35,15 @@
             <div class="profile-image-container">
                 <div class="image-background-strip"></div>
                 <div class="profile-image-frame">
-                    <img src="about.jpg" alt="Vinayak Tiwari" class="profile-image">
+                    <img src="about.jpg" alt="Vinayak Tiwari" class="profile-image" loading="eager" width="300" height="300">
                 </div>
             </div>
             <div class="hero-text">
                 <h1 class="animate-text">Hi, I'm Vinayak Tiwari</h1>
                 <h2 class="animate-text">Data Science Enthusiast & Web Developer</h2>
                 <div class="hero-buttons">
-                    <a href="#about" class="cta-button">
-                        <span>Learn More</span>
+                    <a href="https://drive.google.com/file/d/15yPjRsCxJ6hNgRlHi-_AIpBrPzHIvT8L/view?usp=sharing" target="_blank" class="cta-button">
+                        <span>My Portfolio</span>
                     </a>
                     <a href="https://www.linkedin.com/in/vintiw6/" target="_blank" class="connect-button">
                         <span>Let's Connect</span> 👋
@@ -189,14 +189,21 @@
             <form id="contact-form" class="contact-form">
                 <div class="form-group">
                     <input type="text" id="name" name="name" required placeholder="Your Name">
+                    <div class="error-message">Please enter your name</div>
                 </div>
                 <div class="form-group">
                     <input type="email" id="email" name="email" required placeholder="Your Email">
+                    <div class="error-message">Please enter a valid email address</div>
                 </div>
                 <div class="form-group">
-                    <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                    <textarea id="message" name="message" required placeholder="Your Message" maxlength="500"></textarea>
+                    <div class="error-message">Please enter your message</div>
+                    <div class="character-counter"><span id="char-count">0</span>/500</div>
                 </div>
-                <button type="submit" class="submit-button">Send Message</button>
+                <button type="submit" class="submit-button">
+                    <div class="loading-spinner"></div>
+                    <span>Send Message</span>
+                </button>
             </form>
             <div class="social-links">
                 <a href="mailto:contact.vinayaktiwari@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
@@ -207,5 +214,11 @@
     </section>
 
     <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("z0o7tM5NB8alCgaif");
+        })();
+    </script>
 </body>
 </html> 

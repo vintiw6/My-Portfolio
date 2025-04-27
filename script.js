@@ -55,8 +55,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
         
+        if (targetId === '#home') {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            return;
+        }
+        
+        const targetElement = document.querySelector(targetId);
         if (targetElement) {
             const headerOffset = 80;
             const elementPosition = targetElement.getBoundingClientRect().top;
@@ -116,6 +124,58 @@ const handleScroll = debounce(() => {
 
 window.addEventListener('scroll', handleScroll);
 
+// Image loading animation
+document.querySelectorAll('img').forEach(img => {
+    if (img.complete) {
+        img.classList.add('loaded');
+    } else {
+        img.addEventListener('load', () => {
+            img.classList.add('loaded');
+        });
+    }
+});
+
+// Mobile menu toggle
+const navbar = document.querySelector('.navbar');
+let lastScrollTop = 0;
+let scrollTimeout;
+
+window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Clear the previous timeout
+    clearTimeout(scrollTimeout);
+    
+    // Show navbar
+    navbar.classList.remove('hidden');
+    navbar.classList.add('visible');
+    
+    // Set a timeout to hide the navbar after scrolling stops
+    scrollTimeout = setTimeout(() => {
+        navbar.classList.remove('visible');
+        navbar.classList.add('hidden');
+    }, 1500);
+    
+    lastScrollTop = scrollTop;
+});
+
+// Show navbar on touch/mouse movement
+document.addEventListener('mousemove', () => {
+    navbar.classList.remove('hidden');
+    navbar.classList.add('visible');
+    
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+        navbar.classList.remove('visible');
+        navbar.classList.add('hidden');
+    }, 1500);
+});
+
+// Initialize navbar state
+if (window.innerWidth <= 768) {
+    navbar.classList.add('hidden');
+}
+
 // Initialize the page
 document.addEventListener('DOMContentLoaded', () => {
     // Add initial visible class to hero section
@@ -126,49 +186,24 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Rest of your initialization code...
     createProjectCards();
-    
-    // Form submission handling
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
-        });
-    }
-});
-
-// Form validation
-const contactForm = document.getElementById('contact-form');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
-    // Basic validation
-    if (!name || !email || !message) {
-        alert('Please fill in all fields');
-        return;
-    }
-    
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert('Please enter a valid email address');
-        return;
-    }
-    
-    // Here you would typically send the form data to a server
-    // For now, we'll just show a success message
-    alert('Message sent successfully!');
-    contactForm.reset();
 });
 
 // Project data
 const projects = [
+    {
+        title: "Campus Vendor Connect",
+        description: "A platform connecting university students with campus vendors for seamless food ordering and delivery. Features real-time order tracking, vendor management, and student-friendly interface.",
+        technologies: [
+            { name: "HTML5", icon: "devicon-html5-plain colored" },
+            { name: "React", icon: "devicon-react-original colored" },
+            { name: "TypeScript", icon: "devicon-typescript-plain colored" },
+            { name: "Firebase", icon: "devicon-firebase-plain colored" },
+            { name: "Node.js", icon: "devicon-nodejs-plain colored" },
+            { name: "Tailwind CSS", icon: "devicon-tailwindcss-plain colored" }
+        ],
+        github: "https://github.com/vintiw6/Campus-Vendor-Connect",
+        demo: "https://campus-vendor-connect.vercel.app/"
+    },
     {
         title: "CitizenAlert",
         description: "Community emergency alert system with real-time notifications and interactive maps.",
