@@ -232,33 +232,95 @@ body::before {
 
 @media screen and (max-width: 768px) {
     .navbar {
-        padding: 0.4rem 1rem;
-        width: 90%;
-        max-width: 400px;
+        position: fixed;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85%;
+        max-width: 320px;
+        background: rgba(0, 21, 48, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 0.6rem 1.2rem;
+        border-radius: 50px;
+        border: 1px solid rgba(0, 116, 122, 0.2);
+        z-index: 1000;
+    }
+
+    .nav-container {
+        padding: 0;
+        width: 100%;
     }
 
     .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         gap: 0.5rem;
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     .nav-link {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        padding: 0;
+        font-size: 1.3rem;
+        color: var(--text-primary);
+        border-radius: 50%;
+        background: rgba(0, 116, 122, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+        background: rgba(0, 116, 122, 0.2);
+        transform: translateY(-3px);
+        color: var(--accent-color);
+    }
+
+    .nav-link i {
+        font-size: 1.3rem;
+    }
+
+    .navbar.hidden {
+        transform: translate(-50%, -150%);
+        opacity: 0;
+    }
+
+    .navbar.visible {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+
+    /* Remove the section padding adjustment since navbar is now at top */
+    .section {
+        padding-left: 2rem;
     }
 }
 
 @media screen and (max-width: 480px) {
     .navbar {
-        padding: 0.3rem 0.8rem;
+        top: 12px;
+        padding: 0.5rem 1rem;
+        width: 90%;
+        max-width: 280px;
     }
 
     .nav-links {
-        gap: 0.3rem;
+        gap: 0.4rem;
     }
 
     .nav-link {
-        padding: 0.3rem 0.6rem;
-        font-size: 0.85rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .nav-link i {
+        font-size: 1.2rem;
     }
 }
 
@@ -305,14 +367,17 @@ body::before {
 }
 
 .profile-image-container {
-    width: min(280px, 70vw);
-    height: min(280px, 70vw);
+    width: 280px;
+    height: 280px;
     position: relative;
-    margin-bottom: 2rem;
+    margin: 0 auto 2rem;
     border-radius: 50%;
     overflow: hidden;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
                 box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .profile-image-container:hover {
@@ -331,6 +396,9 @@ body::before {
     background: var(--bg-secondary);
     border: 4px solid rgba(0, 116, 122, 0.15);
     transition: border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .profile-image-container:hover .profile-image-frame {
@@ -338,14 +406,20 @@ body::before {
 }
 
 .profile-image {
-    width: 100%;
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
     object-fit: cover;
+    object-position: center center;
     transition: transform 0.3s ease;
+    opacity: 1;
+    display: block;
+    transform: translateY(25px) scale(1.2);
 }
 
 .profile-image-container:hover .profile-image {
-    transform: scale(1.05);
+    transform: translateY(25px) scale(1.25);
 }
 
 .image-background-strip {
@@ -456,9 +530,18 @@ body::before {
     }
 
     .profile-image-container {
-        width: min(240px, 60vw);
-        height: min(240px, 60vw);
+        width: 220px;
+        height: 220px;
+        margin-top: 4rem;
         margin-bottom: 1.5rem;
+    }
+
+    .profile-image-frame {
+        border-width: 3px;
+    }
+
+    .profile-image {
+        transform: translateY(60px) scale(1);
     }
 
     .image-background-strip {
@@ -483,8 +566,18 @@ body::before {
 
 @media screen and (max-width: 480px) {
     .profile-image-container {
-        width: min(200px, 55vw);
-        height: min(200px, 55vw);
+        width: 180px;
+        height: 180px;
+        margin-top: 3.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .profile-image-frame {
+        border-width: 2px;
+    }
+
+    .profile-image {
+        transform: translateY(50px) scale(1.15);
     }
 
     .image-background-strip {
@@ -941,73 +1034,6 @@ html {
 
 /* Mobile Optimizations */
 @media (max-width: 768px) {
-    .navbar {
-        position: fixed;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        padding: 10px 5px;
-        z-index: 1000;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        margin-left: 5px;
-    }
-
-    .nav-container {
-        width: auto;
-        max-width: none;
-        padding: 0;
-    }
-
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        margin: 0;
-        padding: 0;
-    }
-
-    .nav-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        padding: 0;
-        font-size: 1.2rem;
-        color: #333;
-        text-decoration: none;
-        border-radius: 50%;
-        transition: all 0.3s ease;
-    }
-
-    .nav-link:hover {
-        background: rgba(74, 144, 226, 0.1);
-        transform: scale(1.1);
-    }
-
-    .nav-link i {
-        font-size: 1.2rem;
-    }
-
-    /* Adjust content to not overlap with navbar */
-    .section {
-        padding-left: 50px;
-    }
-
-    /* Hide navbar on scroll */
-    .navbar.hidden {
-        transform: translateY(-50%) translateX(-100%);
-        transition: transform 0.3s ease;
-    }
-
-    .navbar.visible {
-        transform: translateY(-50%) translateX(0);
-        transition: transform 0.3s ease;
-    }
-
     .hero-content {
         flex-direction: column;
         text-align: center;
@@ -1053,10 +1079,7 @@ html {
 /* Loading Animation for Images */
 .profile-image {
     opacity: 0;
-    transition: opacity 0.3s ease;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .profile-image.loaded {
@@ -1069,4 +1092,26 @@ html {
     border-radius: 50%;
     overflow: hidden;
     position: relative;
+}
+
+/* Tablet Screens */
+@media screen and (max-width: 768px) {
+    .profile-image {
+        transform: translateY(60px) scale(1);
+    }
+    
+    .profile-image-container:hover .profile-image {
+        transform: translateY(60px) scale(1.05);
+    }
+}
+
+/* Mobile Screens */
+@media screen and (max-width: 480px) {
+    .profile-image {
+        transform: translateY(50px) scale(1.15);
+    }
+    
+    .profile-image-container:hover .profile-image {
+        transform: translateY(50px) scale(1.2);
+    }
 } 
