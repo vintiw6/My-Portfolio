@@ -315,4 +315,66 @@ function createProjectCards() {
         projectCard.appendChild(projectContent);
         projectsGrid.appendChild(projectCard);
     });
-} 
+}
+
+// Contact form handling
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const submitButton = this.querySelector('.submit-button');
+    const loadingSpinner = submitButton.querySelector('.loading-spinner');
+    const buttonText = submitButton.querySelector('span');
+    
+    // Show loading state
+    submitButton.disabled = true;
+    loadingSpinner.style.display = 'inline-block';
+    buttonText.textContent = 'Sending...';
+    
+    // Get form data
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+    };
+    
+    // Send email using EmailJS
+    emailjs.send('service_id', 'template_id', formData)
+        .then(function() {
+            // Success
+            submitButton.style.background = '#4CAF50';
+            buttonText.textContent = 'Message Sent!';
+            
+            // Reset form
+            document.getElementById('contact-form').reset();
+            document.getElementById('char-count').textContent = '0';
+            
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                submitButton.disabled = false;
+                submitButton.style.background = '#4a90e2';
+                buttonText.textContent = 'Send Message';
+                loadingSpinner.style.display = 'none';
+            }, 3000);
+        })
+        .catch(function(error) {
+            // Error
+            submitButton.style.background = '#f44336';
+            buttonText.textContent = 'Error! Try Again';
+            
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                submitButton.disabled = false;
+                submitButton.style.background = '#4a90e2';
+                buttonText.textContent = 'Send Message';
+                loadingSpinner.style.display = 'none';
+            }, 3000);
+            
+            console.error('EmailJS error:', error);
+        });
+});
+
+// Character counter for message textarea
+document.getElementById('message').addEventListener('input', function() {
+    const charCount = document.getElementById('char-count');
+    charCount.textContent = this.value.length;
+}); 
