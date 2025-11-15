@@ -432,16 +432,48 @@ function createExperienceCards() {
 			e.preventDefault();
 			e.stopPropagation();
 
-			// Close all other modals
-			allNodeDetails.forEach((detail) => {
-				if (detail !== nodeDetails) {
-					detail.classList.remove("expanded");
-				}
+			// Create or reuse a global modal overlay appended to body so it sits above all nodes
+			let overlay = document.querySelector(".node-modal-overlay");
+			if (!overlay) {
+				overlay = document.createElement("div");
+				overlay.className = "node-modal-overlay";
+				overlay.innerHTML = `
+					<div class="node-modal" role="dialog" aria-modal="true">
+						<button class="node-modal-close" aria-label="Close">×</button>
+						<div class="node-modal-content"></div>
+					</div>
+				`;
+				document.body.appendChild(overlay);
+
+				// Close when clicking overlay (but not modal content)
+				overlay.addEventListener("click", function (ev) {
+					if (ev.target === overlay) {
+						overlay.classList.remove("open");
+						document.body.style.overflow = "";
+					}
+				});
+
+				// Close button
+				overlay
+					.querySelector(".node-modal-close")
+					.addEventListener("click", function () {
+						overlay.classList.remove("open");
+						document.body.style.overflow = "";
+					});
+			}
+
+			// Close any other open overlays
+			document.querySelectorAll(".node-modal-overlay.open").forEach((ov) => {
+				ov.classList.remove("open");
 			});
 
-			const isExpanded = this.getAttribute("aria-expanded") === "true";
-			this.setAttribute("aria-expanded", !isExpanded);
-			nodeDetails.classList.toggle("expanded");
+			// Populate modal content with this node's details
+			const modalContent = overlay.querySelector(".node-modal-content");
+			modalContent.innerHTML = nodeDetails.innerHTML;
+
+			// Show overlay and prevent body scroll
+			overlay.classList.add("open");
+			document.body.style.overflow = "hidden";
 		});
 
 		experienceContainer.appendChild(experienceNode);
