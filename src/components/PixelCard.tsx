@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, HTMLMotionProps } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-interface PixelCardProps extends React.HTMLAttributes<HTMLDivElement> {
+interface PixelCardProps extends HTMLMotionProps<"div"> {
   title: string;
   description?: string;
   tags?: string[];
@@ -26,12 +26,12 @@ const PixelCard = React.forwardRef<HTMLDivElement, PixelCardProps>(
         {...props}
       >
         <div className="flex items-start justify-between">
-          <h3 className="font-pixel text-xl text-accent-secondary">{title}</h3>
+          <h3 className="font-pixel text-2xl text-accent-secondary">{title}</h3>
           {icon && <div className="text-accent-highlight">{icon}</div>}
         </div>
 
         {description && (
-          <p className="font-mono text-sm text-text-secondary flex-grow">
+          <p className="font-mono text-base text-text-secondary flex-grow">
             {description}
           </p>
         )}
@@ -43,7 +43,7 @@ const PixelCard = React.forwardRef<HTMLDivElement, PixelCardProps>(
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="text-xs font-pixel px-2 py-1 bg-background border border-panel-border text-text-primary"
+                className="text-sm font-pixel px-2 py-1 bg-background border border-panel-border text-text-primary"
               >
                 {tag}
               </span>

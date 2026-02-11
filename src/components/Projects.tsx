@@ -90,13 +90,13 @@ export function Projects() {
                   <div className="flex gap-2">
                     <PixelButton 
                       variant="secondary" 
-                      className="flex-1 text-xs py-1"
+                      className="flex-1 text-sm py-1"
                       onClick={() => window.open(project.github, "_blank")}
                     >
                       <Github className="w-3 h-3 mr-1 inline" /> Code
                     </PixelButton>
                     <PixelButton 
-                      className="flex-1 text-xs py-1"
+                      className="flex-1 text-sm py-1"
                       onClick={() => window.open(project.demo, "_blank")}
                     >
                       <ExternalLink className="w-3 h-3 mr-1 inline" /> Demo

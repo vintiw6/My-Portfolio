@@ -1,10 +1,8 @@
-"use client";
-
 import React from "react";
-import { motion } from "framer-motion";
-import { cn } from "@/lib/utils"; // We need to create lib/utils for clsx/tailwind-merge
+import { motion, HTMLMotionProps } from "framer-motion";
+import { cn } from "@/lib/utils";
 
-interface PixelButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface PixelButtonProps extends HTMLMotionProps<"button"> {
   variant?: "primary" | "secondary" | "danger";
   isLoading?: boolean;
 }
