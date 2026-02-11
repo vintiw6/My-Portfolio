@@ -10,6 +10,7 @@ interface PixelCardProps extends HTMLMotionProps<"div"> {
   tags?: string[];
   icon?: React.ReactNode;
   footer?: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const PixelCard = React.forwardRef<HTMLDivElement, PixelCardProps>(
