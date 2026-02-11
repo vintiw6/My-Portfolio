@@ -1,0 +1,612 @@
+Below is your **Design Doc (Document File)** based on the **Milady Pixel Art Website reference**, adapted professionally for your personal portfolio.
+
+---
+
+# DESIGN DOCUMENT
+
+## Project: PixelForge – Pixel Art Interactive Portfolio
+
+**Owner:** Vinayak Tiwari
+**Version:** 1.0
+**Reference Design:** Milady – Pixel Art Website (Dribbble)
+**Date:** February 2026
+
+---
+
+# 1. Introduction
+
+## 1.1 Purpose
+
+This document defines the complete visual, interaction, layout, and component design system for the PixelForge portfolio website. The design is inspired by the **Milady Pixel Art Website**, which demonstrates a modern pixel-art interface combining retro aesthetics with clean, structured UI panels and professional usability. ([Dribbble][1])
+
+The goal is to create a visually immersive pixel-art portfolio that presents Vinayak Tiwari as a modern, creative, and technically skilled developer.
+
+---
+
+# 2. Design Reference Analysis (Milady Pixel Art Website)
+
+## 2.1 Key Visual Characteristics
+
+The reference design uses:
+
+* Pixel-art environment
+* Character-centered layout
+* Pixel dialog boxes and panels
+* Structured UI grid
+* Retro game-inspired interface
+* Clean information hierarchy
+
+---
+
+## 2.2 Core Design Elements to Adopt
+
+### Pixel Character Focus
+
+* Central pixel avatar represents the developer
+* Acts as the focal point of the page
+
+### Panel-Based Layout
+
+* Information displayed in pixel panels
+* Modular and clean structure
+
+### Retro UI System
+
+* Pixel borders
+* Pixel buttons
+* Pixel icons
+
+### Interactive Game-like Environment
+
+* Character-based environment
+* Interactive elements
+
+---
+
+# 3. Overall Design Architecture
+
+## 3.1 Page Layout Structure
+
+Single-page structured layout:
+
+```
+Navbar
+
+Hero Section (Pixel Character Scene)
+
+About Panel
+
+Projects Panel
+
+Skills Panel
+
+Contact Panel
+
+Footer
+```
+
+---
+
+## 3.2 Visual Hierarchy
+
+Priority order:
+
+1. Pixel character
+2. Name and title
+3. Interactive panels
+4. Projects
+5. Contact information
+
+---
+
+# 4. Visual System
+
+---
+
+# 4.1 Color System
+
+Based on reference aesthetic.
+
+## Primary Colors
+
+Background:
+
+```
+#0B0F1A
+```
+
+Panel Background:
+
+```
+#111827
+```
+
+Panel Border:
+
+```
+#374151
+```
+
+---
+
+## Accent Colors
+
+Primary Accent:
+
+```
+#22C55E
+```
+
+Secondary Accent:
+
+```
+#38BDF8
+```
+
+Highlight Accent:
+
+```
+#A78BFA
+```
+
+Pixel Highlight:
+
+```
+#FACC15
+```
+
+---
+
+## Text Colors
+
+Primary:
+
+```
+#E5E7EB
+```
+
+Secondary:
+
+```
+#9CA3AF
+```
+
+---
+
+# 4.2 Typography System
+
+## Primary Font (Pixel Font)
+
+Used for:
+
+* Name
+* Titles
+* Buttons
+* Headings
+
+Font:
+Pixelify Sans
+
+---
+
+## Secondary Font
+
+Used for:
+
+* Paragraph text
+* Project descriptions
+
+Font:
+JetBrains Mono
+
+---
+
+# 4.3 Pixel UI Styling
+
+All components must include:
+
+* Pixel borders (2–4px)
+* Hard edges (no rounded corners)
+* Pixel shadows
+* Block-based design
+
+---
+
+# 5. Layout and Component Design
+
+---
+
+# 5.1 Hero Section Design
+
+## Layout Structure
+
+```
+Left:
+Text content
+
+Center:
+Pixel character
+
+Right:
+Interactive panel
+```
+
+---
+
+## Components
+
+Includes:
+
+* Pixel avatar
+* Developer name
+* Title
+* Tagline
+* Action buttons
+
+---
+
+## Interaction
+
+Character idle animation
+
+Buttons:
+
+Hover state:
+
+* Glow effect
+* Pixel highlight
+
+Click state:
+
+* Pixel press animation
+
+---
+
+# 5.2 Panel System Design
+
+Reference uses modular panel structure.
+
+Each panel includes:
+
+```
+Panel Border
+Panel Header
+Panel Content
+Panel Footer (optional)
+```
+
+---
+
+## Panel Types
+
+About Panel
+Projects Panel
+Skills Panel
+Contact Panel
+
+---
+
+# 5.3 Projects Panel Design
+
+## Layout
+
+Grid-based pixel card system
+
+Desktop:
+3 columns
+
+Tablet:
+2 columns
+
+Mobile:
+1 column
+
+---
+
+## Project Card Structure
+
+```
+Pixel image
+
+Project title
+
+Description
+
+Tech stack
+
+Buttons:
+GitHub
+Live Demo
+```
+
+---
+
+## Interaction
+
+Hover:
+
+* Panel glow
+* Slight elevation
+
+Click:
+
+* Opens project detail modal
+
+---
+
+# 5.4 Skills Panel Design
+
+## Layout
+
+Pixel grid system
+
+Each skill card includes:
+
+* Pixel icon
+* Skill name
+
+---
+
+## Interaction
+
+Hover:
+
+* Glow
+* Scale effect
+
+---
+
+# 5.5 Contact Panel Design
+
+## Layout
+
+Pixel dialog box style
+
+Includes:
+
+* Email
+* GitHub
+* LinkedIn
+* Resume button
+
+---
+
+## Optional Feature
+
+Pixel terminal interface
+
+---
+
+# 5.6 Navbar Design
+
+## Layout
+
+Left:
+Logo or Name
+
+Right:
+Navigation links
+
+---
+
+## Behavior
+
+Sticky navbar
+
+On scroll:
+
+* Background becomes solid
+* Pixel border appears
+
+---
+
+# 6. Interaction Design System
+
+---
+
+# 6.1 Hover States
+
+Applies to:
+
+* Buttons
+* Cards
+* Panels
+
+Effects:
+
+* Glow
+* Scale increase (1.05)
+* Color change
+
+---
+
+# 6.2 Click States
+
+Effects:
+
+* Scale decrease (0.95)
+* Pixel press animation
+
+---
+
+# 6.3 Scroll Animation
+
+Panels animate on entering viewport:
+
+* Fade in
+* Slide up
+
+---
+
+# 7. Animation System
+
+---
+
+# 7.1 Animation Types
+
+Hero animation
+Panel entry animation
+Hover animation
+Button animation
+
+---
+
+# 7.2 Animation Timing
+
+Fast:
+150ms
+
+Medium:
+300ms
+
+Slow:
+500ms
+
+---
+
+# 8. Responsive Design
+
+---
+
+# 8.1 Breakpoints
+
+Mobile:
+< 640px
+
+Tablet:
+640px–1024px
+
+Desktop:
+
+> 1024px
+
+---
+
+# 8.2 Mobile Adaptation
+
+Character moves above content
+
+Panels stack vertically
+
+Reduced animation complexity
+
+---
+
+# 9. Asset Requirements
+
+---
+
+# 9.1 Required Pixel Assets
+
+Pixel avatar
+Pixel icons
+Pixel background
+Pixel UI elements
+
+---
+
+# 9.2 Asset Format
+
+PNG preferred
+
+SVG allowed for icons
+
+---
+
+# 10. Technical Implementation Design
+
+---
+
+# 10.1 Framework
+
+Next.js
+
+---
+
+# 10.2 Styling
+
+Tailwind CSS
+
+Custom pixel theme
+
+---
+
+# 10.3 Animation
+
+Framer Motion
+
+---
+
+# 11. Folder Structure
+
+```
+public/
+
+pixel/
+ avatar/
+ icons/
+ ui/
+ backgrounds/
+
+src/
+
+components/
+ Hero.jsx
+ Panel.jsx
+ Projects.jsx
+ Skills.jsx
+ Contact.jsx
+ Navbar.jsx
+
+styles/
+ pixel-theme.css
+ globals.css
+```
+
+---
+
+# 12. Performance Design
+
+Requirements:
+
+Load time < 2 seconds
+60 FPS animations
+Optimized images
+
+---
+
+# 13. Accessibility Design
+
+Include:
+
+Keyboard navigation
+High contrast text
+Focus states
+
+---
+
+# 14. Future Enhancements
+
+Possible upgrades:
+
+Fully interactive pixel room
+Character movement
+Game-like navigation
+Sound effects
+
+---
+
+# 15. Final Design Summary
+
+The PixelForge portfolio will be:
+
+* Pixel-art based
+* Interactive
+* Professional
+* Fast
+* Unique
+* Recruiter-focused
+
+Inspired by Milady Pixel Art Website but customized for developer portfolio.
+
+---

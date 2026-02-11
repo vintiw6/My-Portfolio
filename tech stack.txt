@@ -1,0 +1,318 @@
+Here is a **recommended tech stack** for your **Pixel Art Interactive Personal Portfolio Website**, optimized for **performance, pixel-perfect visuals, animations, and recruiter-level quality**, and aligned with your existing experience in **Next.js, Tailwind, and MongoDB**.
+
+---
+
+# Tech Stack – PixelForge Portfolio
+
+## 1. Frontend Core (Primary Stack)
+
+### Framework: Next.js 14+
+
+**Why:**
+
+* Industry standard for modern portfolios
+* Server-side rendering (SSR) → better performance & SEO
+* Built-in routing
+* Optimized images and fonts
+* Perfect for Vercel deployment
+
+**Use for:**
+
+* Full website structure
+* Routing
+* Layout system
+* SEO optimization
+
+---
+
+### Library: React 18+
+
+**Why:**
+
+* Component-based architecture
+* Reusable UI components
+* Excellent ecosystem
+
+**Use for:**
+
+* UI components
+* State management
+* Interactive elements
+
+---
+
+### Styling: Tailwind CSS
+
+**Why:**
+
+* Fast development
+* Easy responsive design
+* Perfect for custom pixel themes
+* Works well with Next.js
+
+**Use for:**
+
+* Layout styling
+* Pixel UI styling
+* Responsive design
+
+---
+
+### Pixel Styling: Custom Pixel Theme (CSS)
+
+**Why:**
+
+* Tailwind alone isn’t enough for pixel borders and effects
+
+**Use for:**
+
+* Pixel borders
+* Pixel shadows
+* Retro effects
+
+---
+
+# 2. Animation Stack
+
+### Framer Motion (Primary animation library)
+
+**Why:**
+
+* Best animation library for React
+* Smooth performance
+* Easy to use
+* Production-grade animations
+
+**Use for:**
+
+* Page transitions
+* Hover animations
+* Panel animations
+* Character animations
+
+---
+
+### Optional Advanced: GSAP
+
+**Use for (optional):**
+
+* Advanced pixel animations
+* Complex timeline animations
+
+---
+
+# 3. Graphics & Pixel Assets
+
+### Asset Types
+
+* PNG → primary format
+* SVG → icons
+* Sprite sheets → character animations
+
+---
+
+### Asset Tools
+
+Optional creation tools:
+
+* Aseprite (best pixel art tool)
+* Piskel (free)
+* Photoshop
+
+---
+
+# 4. Font Stack
+
+### Primary Font (Pixel Font)
+
+Pixelify Sans
+
+From:
+Google Fonts
+
+---
+
+### Secondary Font
+
+JetBrains Mono
+
+Used for:
+
+* Text
+* Descriptions
+
+---
+
+# 5. Deployment Stack
+
+### Hosting Platform: Vercel (Recommended)
+
+**Why:**
+
+* Built for Next.js
+* Fast global CDN
+* Free tier available
+* Automatic deployments
+
+---
+
+### Alternative:
+
+* Netlify
+
+---
+
+# 6. Version Control
+
+### Git
+
+### GitHub
+
+Use for:
+
+* Source code management
+* Portfolio integration
+* Recruiter visibility
+
+---
+
+# 7. Image Optimization
+
+### Next.js Image Component
+
+**Why:**
+
+* Automatic optimization
+* Lazy loading
+* Fast performance
+
+---
+
+# 8. Optional Backend (Future Upgrade)
+
+Not required for basic portfolio.
+
+Optional if adding:
+
+* Contact form backend
+* Blog system
+* Admin panel
+
+Stack:
+
+Node.js
+MongoDB
+Next.js API routes
+
+---
+
+# 9. Development Tools
+
+### Code Editor
+
+VS Code
+
+Recommended extensions:
+
+* Tailwind CSS IntelliSense
+* Prettier
+* ESLint
+
+---
+
+### Package Manager
+
+npm
+OR
+pnpm (recommended)
+
+---
+
+# 10. Performance Optimization Stack
+
+### Built-in Tools
+
+Next.js optimization features:
+
+* Image optimization
+* Code splitting
+* Lazy loading
+
+---
+
+# 11. SEO Stack
+
+Use Next.js Metadata API
+
+Includes:
+
+* title
+* description
+* OpenGraph tags
+
+---
+
+# 12. Final Recommended Stack Summary
+
+## Core Stack
+
+* Next.js 14
+* React 18
+* Tailwind CSS
+* Framer Motion
+
+---
+
+## Styling & Pixel System
+
+* Custom CSS Pixel Theme
+* Pixelify Sans font
+* JetBrains Mono font
+
+---
+
+## Assets
+
+* PNG pixel assets
+* SVG icons
+
+---
+
+## Deployment
+
+* Vercel
+
+---
+
+## Version Control
+
+* Git
+* GitHub
+
+---
+
+# 13. Optional Advanced Stack (Phase 2)
+
+For extreme interactive version:
+
+* Three.js → pixel 3D world
+* Howler.js → sound effects
+* Lenis → smooth scrolling
+
+---
+
+# 14. Recommended Stack for YOU specifically (Best choice)
+
+Based on your experience:
+
+**Use this exact stack:**
+
+Next.js
+Tailwind CSS
+Framer Motion
+Pixelify Sans
+JetBrains Mono
+Vercel
+GitHub
+
+---

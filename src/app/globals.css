@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+:root {
+  /* Core Colors */
+  --background: #0B0F1A;
+  --foreground: #E5E7EB;
+  
+  /* Panel Colors */
+  --panel-bg: #111827;
+  --panel-border: #374151;
+  
+  /* Accents */
+  --accent-primary: #22C55E;
+  --accent-secondary: #38BDF8;
+  --accent-highlight: #A78BFA;
+  --pixel-highlight: #FACC15;
+  
+  /* Text */
+  --text-primary: #E5E7EB;
+  --text-secondary: #9CA3AF;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-panel-bg: var(--panel-bg);
+  --color-panel-border: var(--panel-border);
+  
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-accent-highlight: var(--accent-highlight);
+  --color-pixel-highlight: var(--pixel-highlight);
+  
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  
+  --font-pixel: "Pixelify Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-pixel);
+  -webkit-font-smoothing: antialiased;
+  image-rendering: pixelated; /* Essential for pixel art */
+}
+
+@utility pixel-border {
+  border-width: 2px;
+  border-color: var(--color-panel-border);
+  border-style: solid;
+  /* Optional: heavy shadow for depth */
+  box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.3);
+}
+
+@utility pixel-box {
+  background-color: var(--color-panel-bg);
+  border-width: 2px;
+  border-color: var(--color-panel-border);
+  box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.3);
+}
+
+@utility pixel-text-shadow {
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Custom scrollbar for Webkit */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background); 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-panel-border); 
+  border: 2px solid var(--color-background);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-primary); 
+}

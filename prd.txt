@@ -1,0 +1,594 @@
+Here is a **comprehensive PRD for a Pixel Art–Based Interactive Personal Portfolio Website**, tailored to your goals, skills, and modern creative vision.
+
+---
+
+# Product Requirements Document (PRD)
+
+**Project Name:** PixelForge – Vinayak’s Pixel Art Portfolio
+**Owner:** Vinayak Tiwari
+**Version:** 1.0
+**Platform:** Web Application
+**Primary Device:** Desktop-first, fully responsive
+
+---
+
+# 1. Product Overview
+
+## 1.1 Purpose
+
+PixelForge is a modern, creative, and interactive personal portfolio website built with a **pixel art aesthetic**, inspired by retro games. It serves as a professional showcase of Vinayak Tiwari’s skills, projects, and experience in software development and data science.
+
+The website will combine:
+
+* Professional portfolio functionality
+* Interactive game-like experience
+* Modern frontend technologies
+* Pixel art visual style
+
+---
+
+## 1.2 Goals
+
+### Primary Goals
+
+* Showcase projects professionally
+* Impress recruiters immediately (within 5–10 seconds)
+* Demonstrate strong frontend and full-stack skills
+* Differentiate from traditional portfolios
+* Increase internship and job opportunities
+
+### Secondary Goals
+
+* Build strong personal brand identity
+* Demonstrate creativity and technical depth
+* Provide memorable and interactive experience
+* Serve as central hub for professional links
+
+---
+
+## 1.3 Success Metrics
+
+* Recruiter engagement time > 30 seconds
+* Portfolio load time < 2 seconds
+* Lighthouse score > 90
+* Increase in internship responses
+* Positive feedback from recruiters/developers
+
+---
+
+# 2. Target Audience
+
+## Primary Users
+
+* Recruiters
+* Hiring managers
+* Internship coordinators
+* Technical leads
+
+## Secondary Users
+
+* Developers
+* Collaborators
+* Professors
+* Tech community
+
+---
+
+# 3. Product Vision
+
+## Core Experience
+
+The user enters a pixel-art themed world representing the developer.
+
+The experience should feel like:
+
+* A retro game interface
+* Interactive developer workspace
+* Pixel-art control panel
+* Game-inspired UI
+
+But still remain:
+
+* Professional
+* Clean
+* Fast
+* Easy to navigate
+
+---
+
+# 4. Design Requirements
+
+## 4.1 Visual Style
+
+### Theme
+
+* Pixel art aesthetic
+* Retro gaming inspiration
+* Modern implementation
+
+### Inspiration Sources
+
+* Stardew Valley
+* Undertale
+* Celeste
+* Game Boy Advance UI
+* Retro terminal interfaces
+
+---
+
+## 4.2 Color Palette
+
+Primary:
+
+* Dark background (#0f172a or similar)
+* Neon accent colors
+* Pixel-style highlights
+
+Accent colors:
+
+* Cyan
+* Purple
+* Blue
+* Green
+
+---
+
+## 4.3 Typography
+
+Pixel fonts:
+
+Primary font:
+
+* Pixelify Sans
+  OR
+* Press Start 2P
+
+Secondary font:
+
+* JetBrains Mono
+* Inter
+
+---
+
+## 4.4 UI Components
+
+All components must follow pixel art style:
+
+* Pixel buttons
+* Pixel panels
+* Pixel borders
+* Pixel cards
+* Pixel icons
+
+---
+
+# 5. Core Features
+
+---
+
+# 5.1 Hero Section
+
+## Purpose
+
+Make strong first impression immediately.
+
+## Components
+
+Must include:
+
+* Pixel avatar character
+
+* Developer name:
+  Vinayak Tiwari
+
+* Title:
+  Developer | Data Scientist
+
+* Tagline
+
+Example:
+Building intelligent and interactive digital experiences.
+
+---
+
+## Interactive Elements
+
+* Idle character animation
+* Pixel background animation
+* Animated buttons
+
+Buttons:
+
+* View Projects
+* Contact Me
+* Resume
+
+---
+
+# 5.2 About Section
+
+## Purpose
+
+Explain who the developer is.
+
+## Layout
+
+Pixel dialog box style panel.
+
+## Content
+
+Include:
+
+* Introduction
+* Background
+* Interests
+* Career goals
+
+---
+
+## Optional: Game-style stats panel
+
+Example:
+
+Level: 2
+Class: Developer
+Primary Skills:
+Python, React, Data Science
+
+---
+
+# 5.3 Projects Section
+
+## Purpose
+
+Showcase best projects professionally.
+
+## Layout Options
+
+Option 1:
+Pixel cards grid
+
+Option 2:
+Inventory system
+
+Option 3:
+Game menu system
+
+---
+
+## Each Project Must Include
+
+* Project title
+* Pixel thumbnail
+* Description
+* Tech stack
+* GitHub link
+* Live demo link
+
+---
+
+## Your Projects to Include
+
+* Credit Card Validator
+* Smart Finance Tracker
+* Weather App
+* Slot Machine
+* Data Analysis Projects
+
+---
+
+## Interactions
+
+* Hover animation
+* Click → open detailed panel
+* Pixel hover effects
+
+---
+
+# 5.4 Skills Section
+
+## Purpose
+
+Display technical capabilities clearly.
+
+---
+
+## Layout Options
+
+Option 1:
+Pixel grid
+
+Option 2:
+Inventory system
+
+Option 3:
+Skill tree
+
+---
+
+## Skill Categories
+
+Languages:
+
+* Python
+* C++
+* JavaScript
+
+Frontend:
+
+* React
+* Next.js
+* Tailwind
+
+Backend:
+
+* Node.js
+* MongoDB
+
+Data Science:
+
+* Pandas
+* NumPy
+* Machine Learning
+
+---
+
+# 5.5 Contact Section
+
+## Purpose
+
+Allow recruiters to easily contact developer.
+
+---
+
+## Layout Options
+
+Pixel terminal interface
+OR
+Pixel dialog box
+
+---
+
+## Include
+
+* Email
+* GitHub
+* LinkedIn
+* Resume button
+
+Optional:
+
+Contact form
+
+---
+
+# 6. Navigation System
+
+## Requirements
+
+Sticky navbar
+
+Include:
+
+* Home
+* About
+* Projects
+* Skills
+* Contact
+
+---
+
+## Interaction
+
+* Smooth scroll
+* Pixel hover effects
+* Active section highlight
+
+---
+
+# 7. Interactive Systems
+
+## Required Interactions
+
+* Smooth scrolling
+* Hover animations
+* Button press animations
+* Pixel transitions
+* Micro-interactions
+
+---
+
+## Optional Advanced Features
+
+* Character movement
+* Game-like navigation
+* Sound effects toggle
+* Parallax background
+* Interactive environment
+
+---
+
+# 8. Animation Requirements
+
+Use:
+
+* Framer Motion
+
+Animations:
+
+* Fade in
+* Slide in
+* Pixel transitions
+* Hover effects
+
+Performance must remain smooth (60 FPS)
+
+---
+
+# 9. Technical Requirements
+
+## Frontend
+
+Required:
+
+* Next.js
+* React
+* Tailwind CSS
+* Framer Motion
+
+Optional:
+
+* Three.js
+* GSAP
+
+---
+
+## Deployment
+
+Platform:
+
+* Vercel
+
+---
+
+# 10. Performance Requirements
+
+Must meet:
+
+* Load time < 2 seconds
+* Lighthouse score > 90
+* Optimized assets
+* No lag
+
+---
+
+# 11. Responsive Requirements
+
+Must support:
+
+* Desktop
+* Tablet
+* Mobile
+
+---
+
+# 12. Accessibility Requirements
+
+Include:
+
+* Proper contrast
+* Readable fonts
+* Keyboard navigation support
+
+---
+
+# 13. SEO Requirements
+
+Include:
+
+* Meta tags
+* Page title
+* Description
+* OpenGraph tags
+
+---
+
+# 14. Project Structure
+
+Example:
+
+```
+src/
+
+app/
+ layout.jsx
+ page.jsx
+
+components/
+ Hero.jsx
+ About.jsx
+ Projects.jsx
+ Skills.jsx
+ Contact.jsx
+ Navbar.jsx
+
+data/
+ projects.js
+ info.js
+
+styles/
+ globals.css
+
+public/
+ pixel-assets/
+ avatars/
+ icons/
+```
+
+---
+
+# 15. Asset Requirements
+
+Need pixel assets:
+
+* Avatar
+* Icons
+* Background
+* Buttons
+
+Format:
+
+PNG preferred
+
+---
+
+# 16. Timeline
+
+Phase 1: Setup (2 days)
+
+* Next.js setup
+* Tailwind setup
+
+Phase 2: Core UI (5 days)
+
+* Hero
+* About
+* Projects
+* Skills
+
+Phase 3: Animation (4 days)
+
+* Add animations
+* Add interactions
+
+Phase 4: Polish & Deploy (2 days)
+
+Total: ~2 weeks
+
+---
+
+# 17. Definition of Done
+
+Project complete when:
+
+* All sections implemented
+* Pixel art theme consistent
+* Fully responsive
+* Fully interactive
+* Deployed live
+* Resume and GitHub integrated
+
+---
+
+# 18. Future Enhancements
+
+Phase 2 ideas:
+
+* Fully playable pixel world
+* Character movement with keyboard
+* Interactive room portfolio
+* Sound effects
+* Blog system
+
+---
+
