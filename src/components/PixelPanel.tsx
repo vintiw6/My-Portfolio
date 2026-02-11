@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, HTMLMotionProps } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-interface PixelPanelProps extends React.HTMLAttributes<HTMLDivElement> {
+interface PixelPanelProps extends HTMLMotionProps<"div"> {
   title?: string;
   children: React.ReactNode;
 }
