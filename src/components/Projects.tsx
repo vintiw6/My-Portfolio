@@ -9,6 +9,14 @@ import { Github, ExternalLink, Code } from "lucide-react";
 export function Projects() {
   const projects = [
     {
+      title: "Brain Tumor Detection",
+      description: "Deep learning model for detecting brain tumors from MRI scans with high accuracy.",
+      tags: ["Deep Learning", "Python", "Computer Vision", "VGG16"],
+      icon: <Code className="w-6 h-6" />,
+      github: "https://github.com/vintiw6/Brain-Tumor-Detection-Using-Deep-Learning/tree/main",
+      demo: "https://github.com/vintiw6/Brain-Tumor-Detection-Using-Deep-Learning/blob/main/README.md",
+    },
+    {
       title: "Dessert Haven Website",
       description: "A delightful website for a dessert shop featuring a responsive design and appetizing gallery.",
       tags: ["Web Design", "HTML/CSS", "Responsive"],
@@ -85,7 +93,7 @@ export function Projects() {
                 description={project.description}
                 tags={project.tags}
                 icon={project.icon}
-                className="h-full min-h-[400px]"
+                className="h-full min-h-[300px]"
                 footer={
                   <div className="flex gap-2">
                     <PixelButton 

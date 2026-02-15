@@ -20,7 +20,7 @@ const PixelCard = React.forwardRef<HTMLDivElement, PixelCardProps>(
         ref={ref}
         whileHover={{ y: -4, boxShadow: "6px 6px 0 0 rgba(0,0,0,0.4)" }}
         className={cn(
-          "bg-panel-bg border-2 border-panel-border p-4 flex flex-col gap-4 h-full",
+          "bg-panel-bg border-2 border-panel-border p-3 flex flex-col gap-2 h-full",
           "hover:border-accent-primary transition-colors",
           className
         )}
