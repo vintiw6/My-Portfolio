@@ -9,6 +9,14 @@ import { Github, ExternalLink, Code } from "lucide-react";
 export function Projects() {
   const projects = [
     {
+      title: "Football Analysis using YOLO",
+      description: "Real-time football analysis, tracking players and the ball using YOLO object detection models.",
+      tags: ["YOLO", "Computer Vision", "Python", "Deep Learning"],
+      icon: <Code className="w-6 h-6" />,
+      github: "https://github.com/vintiw6/Football-Analysis-using-YOLO",
+      demo: "https://github.com/vintiw6/Football-Analysis-using-YOLO/blob/main/README.md",
+    },
+    {
       title: "Brain Tumor Detection",
       description: "Deep learning model for detecting brain tumors from MRI scans with high accuracy.",
       tags: ["Deep Learning", "Python", "Computer Vision", "VGG16"],
