@@ -62,7 +62,7 @@ export function Projects() {
       tags: ["Game Dev", "JS", "Animation"],
       icon: <Code className="w-6 h-6" />,
       github: "https://github.com/vintiw6/Projects/tree/main/SlotMachine",
-      demo: "https://github.com/vintiw6/Projects/tree/main/SlotMachine",
+      demo: "https://slotmachine-00.streamlit.app/",
     },
     {
       title: "Data Analysis Suite",

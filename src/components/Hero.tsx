@@ -37,7 +37,7 @@ export function Hero() {
           <PixelButton onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}>
             View Projects <ArrowRight className="inline-block ml-2 w-4 h-4" />
           </PixelButton>
-          <PixelButton variant="secondary" onClick={() => window.open("https://drive.google.com/file/d/1OkeF1NU-rb6HB3Y-ySoV0-0wyTzP-KI0/view?usp=sharing", "_blank")}>
+          <PixelButton variant="secondary" onClick={() => window.open("https://drive.google.com/file/d/1hHNJfRxXrY4c4xdjYmExJj9_0f1-gDyr/view?usp=sharing", "_blank")}>
             Resume <Download className="inline-block ml-2 w-4 h-4" />
           </PixelButton>
         </div>

@@ -48,7 +48,7 @@ export function Contact() {
                 
                 <PixelButton 
                   variant="secondary"
-                  onClick={() => window.open("https://drive.google.com/file/d/1OkeF1NU-rb6HB3Y-ySoV0-0wyTzP-KI0/view?usp=sharing", "_blank")}
+                  onClick={() => window.open("https://drive.google.com/file/d/1hHNJfRxXrY4c4xdjYmExJj9_0f1-gDyr/view?usp=sharing", "_blank")}
                   className="flex items-center justify-center gap-2"
                 >
                   <FileText className="w-4 h-4" /> Resume
