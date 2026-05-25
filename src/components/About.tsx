@@ -9,7 +9,7 @@ export function About() {
   const stats = [
     { label: "Level", value: "21", icon: <User className="w-4 h-4" /> },
     { label: "Class", value: "Student", icon: <Code className="w-4 h-4" /> },
-    { label: "Experience", value: "1 Month", icon: <Database className="w-4 h-4" /> },
+    { label: "Experience", value: "6 Months", icon: <Database className="w-4 h-4" /> },
     { label: "Mana", value: "100%", icon: <Brain className="w-4 h-4" /> },
   ];
 
@@ -46,13 +46,13 @@ export function About() {
                 <h3 className="font-pixel text-2xl text-accent-secondary">About The Player</h3>
                 <div className="font-mono text-text-secondary space-y-4 leading-relaxed">
                   <p>
-                    <span className="text-accent-highlight">&gt;</span> Hello! I'm Vinayak, a passionate developer spanning the realms of <span className="text-accent-primary">Web Development</span> and <span className="text-accent-primary">Data Science</span>.
+                    <span className="text-accent-highlight">&gt;</span> Hello! I'm Vinayak, an <span className="text-accent-primary">ML Engineer</span> and <span className="text-accent-primary">Data Scientist</span> specializing in training and implementing intelligent pipelines.
                   </p>
                   <p>
-                    <span className="text-accent-highlight">&gt;</span> I craft digital experiences that are not only functional but also visually engaging. My journey started with a fascination for how code can bring static designs to life, much like pixels forming a character.
+                    <span className="text-accent-highlight">&gt;</span> I build end-to-end machine learning systems, deep learning models, and real-time scrapers that turn complex unstructured data into actionable insights and tools.
                   </p>
                   <p>
-                    <span className="text-accent-highlight">&gt;</span> When I'm not coding, I'm exploring new technologies, optimizing algorithms, or enjoying retro games for inspiration.
+                    <span className="text-accent-highlight">&gt;</span> When I'm not tuning hyperparameters or optimizing training processes, I enjoy studying new AI research papers, participating in Kaggle challenges, and retro gaming.
                   </p>
                 </div>
                 
@@ -60,7 +60,7 @@ export function About() {
                 <div className="pt-4">
                   <h4 className="font-pixel text-sm text-text-secondary mb-2">Inventory (Skills Overview)</h4>
                   <div className="flex flex-wrap gap-2">
-                    {["React", "Next.js", "Python", "MongoDB", "Tailwind"].map((tech) => (
+                    {["Python", "PyTorch", "TensorFlow", "Scikit-Learn", "NLP", "Streamlit"].map((tech) => (
                       <span key={tech} className="px-2 py-1 bg-background border border-panel-border text-xs font-mono text-accent-highlight">
                         {tech}
                       </span>

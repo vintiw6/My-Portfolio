@@ -9,6 +9,14 @@ import { Github, ExternalLink, Code } from "lucide-react";
 export function Projects() {
   const projects = [
     {
+      title: "Indian News Bias Auditor",
+      description: "A real-time NLP pipeline that scrapes 8 major Indian news outlets daily and scores each article for political bias, emotional intensity, clickbait, and framing differences.",
+      tags: ["NLP", "Python", "Streamlit", "Transformers", "Scraping"],
+      icon: <Code className="w-6 h-6" />,
+      github: "https://github.com/vintiw6/Bias-Checker",
+      demo: "https://bias-checker-00.streamlit.app/",
+    },
+    {
       title: "Football Analysis using YOLO",
       description: "Real-time football analysis, tracking players and the ball using YOLO object detection models.",
       tags: ["YOLO", "Computer Vision", "Python", "Deep Learning"],

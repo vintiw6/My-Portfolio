@@ -17,9 +17,9 @@ const skillCategories = [
     skills: ["React", "Next.js", "Tailwind CSS", "Framer Motion", "HTML5/CSS3"],
   },
   {
-    title: "Data Science",
+    title: "Data Science / ML",
     icon: <Brain className="w-5 h-5" />,
-    skills: ["Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Jupyter"],
+    skills: ["PyTorch", "TensorFlow", "Scikit-learn", "SciPy", "Matplotlib"],
   },
 ];
 

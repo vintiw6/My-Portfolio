@@ -26,7 +26,7 @@ export function Hero() {
         </h1>
         
         <div className="text-xl md:text-2xl font-mono text-text-secondary h-8">
-          <Typewriter text="Front End Developer | Data Scientist" speed={100} />
+          <Typewriter text="ML Engineer | Data Scientist" speed={100} />
         </div>
         
         <p className="max-w-md text-text-secondary leading-relaxed font-mono">
