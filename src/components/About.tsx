@@ -39,6 +39,26 @@ export function About() {
                     ))}
                   </div>
                 </div>
+
+                {/* Internship Quest 1 */}
+                <div className="pixel-box p-4 bg-background/50 border-l-4 border-l-accent-primary">
+                  <h4 className="font-pixel text-accent-primary text-sm mb-2">Active Quest</h4>
+                  <div className="font-mono text-xs space-y-1">
+                    <div className="text-text-primary font-bold">Research Intern</div>
+                    <div className="text-accent-highlight text-[10px]">IIIT Naya Raipur</div>
+                    <div className="text-text-secondary text-[10px] pt-1">Feb 2026 - Present</div>
+                  </div>
+                </div>
+
+                {/* Internship Quest 2 */}
+                <div className="pixel-box p-4 bg-background/50 border-l-4 border-l-accent-secondary">
+                  <h4 className="font-pixel text-accent-secondary text-sm mb-2">Completed Quest</h4>
+                  <div className="font-mono text-xs space-y-1">
+                    <div className="text-text-primary font-bold">Software Intern</div>
+                    <div className="text-accent-highlight text-[10px]">CSVTU Forte</div>
+                    <div className="text-text-secondary text-[10px] pt-1">Apr - Jun 2025</div>
+                  </div>
+                </div>
               </div>
 
               {/* Bio Column */}
