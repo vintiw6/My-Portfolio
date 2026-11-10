@@ -38,7 +38,7 @@ export function Skills() {
                 </svg>
               </span>
               <span className="flex-1">{s}</span>
-              <span className="pixel text-[18px] text-accent-ink">READY</span>
+              <span className="text-[11px] font-bold tracking-wide text-[#3c9a3a]">Installed</span>
             </div>
           ))}
         </div>

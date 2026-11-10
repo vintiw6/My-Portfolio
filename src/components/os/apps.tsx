@@ -73,11 +73,11 @@ export const APPS: Record<AppId, AppDef> = {
     Component: Projects,
   },
   skills: {
-    title: "System Properties — Skills",
+    title: "System Properties - Skills",
     label: "Skills",
     icon: "skills",
     w: 480,
-    h: 480,
+    h: 580,
     menu: [],
     bodyClass: "window__body--face",
     Component: Skills,
@@ -92,7 +92,7 @@ export const APPS: Record<AppId, AppDef> = {
     Component: Experience,
   },
   contact: {
-    title: "New Message — Mail",
+    title: "New Message - Mail",
     label: "Contact",
     icon: "mail",
     w: 560,
@@ -112,7 +112,7 @@ export const APPS: Record<AppId, AppDef> = {
     Component: Snake,
   },
   terminal: {
-    title: "Terminal",
+    title: "Command Prompt",
     label: "Terminal",
     icon: "terminal",
     w: 620,

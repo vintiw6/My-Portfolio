@@ -7,10 +7,10 @@ export function About({ open }: AppCtx) {
     <div className="p-4">
       <div className="flex flex-wrap items-center gap-4 border-b border-[var(--face-3)] pb-4">
         <div className="sunken grid h-[88px] w-[88px] flex-none place-items-center bg-[linear-gradient(135deg,#ffd56a,#e5973a)]">
-          <span className="pixel text-[52px] leading-none text-ink">VT</span>
+          <span className="text-[34px] font-bold leading-none text-white [text-shadow:1px_1px_2px_rgba(0,0,0,0.4)]">VT</span>
         </div>
         <div className="min-w-0 flex-1">
-          <h2 className="pixel m-0 text-[40px] font-normal leading-none">{profile.name}</h2>
+          <h2 className="m-0 font-['Trebuchet_MS',Tahoma,sans-serif] text-[26px] font-bold leading-tight">{profile.name}</h2>
           <p className="m-0 mt-1 text-ink-soft">{profile.role}</p>
           <span className="mt-2 inline-flex items-center gap-1.5 border border-[var(--accent-ink)] bg-[#e3eefc] px-2 py-0.5 text-[12px] font-bold text-accent-ink">
             <span className="inline-block h-2 w-2 rounded-full bg-[#3fbf1e]" /> Open to Work
@@ -44,7 +44,7 @@ export function About({ open }: AppCtx) {
               ))}
             </tbody>
           </table>
-          <p className="m-0 mt-3 text-[12px] text-ink-mute">Inventory</p>
+          <p className="m-0 mt-3 text-[12px] text-ink-mute">Toolkit</p>
           <div className="mt-1 flex flex-wrap gap-1">
             {profile.inventory.map((t) => (
               <span key={t} className="chip">

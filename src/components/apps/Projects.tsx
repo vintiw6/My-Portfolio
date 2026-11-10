@@ -88,7 +88,7 @@ function ProjectDetail({ p }: { p: Project }) {
       <div className="flex items-start gap-4">
         <Icon name={kindIcon[p.kind]} size={64} className="flex-none" />
         <div className="min-w-0">
-          <h2 className="pixel m-0 text-[34px] font-normal leading-none">{p.title}</h2>
+          <h2 className="m-0 font-['Trebuchet_MS',Tahoma,sans-serif] text-[22px] font-bold leading-tight">{p.title}</h2>
           <p className="m-0 mt-1 text-ink-mute">Type: {kindLabel[p.kind]}</p>
         </div>
       </div>

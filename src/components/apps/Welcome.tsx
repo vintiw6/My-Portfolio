@@ -17,7 +17,7 @@ export function Welcome({ open }: AppCtx) {
         <li>
           {"  "}*{" "}
           <button className="link border-0 bg-transparent p-0 font-[inherit] text-[13px] cursor-pointer" onClick={() => open("about")}>
-            About_Me.exe
+            About Me
           </button>{" "}
           - who I am
         </li>
@@ -31,7 +31,7 @@ export function Welcome({ open }: AppCtx) {
         <li>
           {"  "}*{" "}
           <button className="link border-0 bg-transparent p-0 font-[inherit] text-[13px] cursor-pointer" onClick={() => open("contact")}>
-            Mail
+            Contact
           </button>{" "}
           - say hello
         </li>
@@ -44,7 +44,7 @@ export function Welcome({ open }: AppCtx) {
         </li>
       </ul>
       <p className="mt-3 text-ink-mute">
-        Tip: double-click desktop icons, drag windows by their title bar, and try the Terminal.
+        Tip: double-click (or tap) desktop icons, drag windows by their title bar, and try the Terminal.
       </p>
     </div>
   );

@@ -14,12 +14,12 @@ export const profile = {
     "Outside of work, I enjoy building small side projects, trying out new tools, and turning ideas into things people can actually use.",
   ],
   stats: [
-    { label: "Level", value: "21" },
-    { label: "Class", value: "Student" },
+    { label: "Age", value: "21" },
+    { label: "Role", value: "Student" },
     { label: "Experience", value: "8 Months" },
     { label: "Status", value: "Open to Work" },
   ],
-  inventory: ["Python", "PyTorch", "TensorFlow", "Scikit-Learn", "NLP", "Streamlit"],
+  inventory: ["Python", "PyTorch", "TensorFlow", "Scikit-learn", "NLP", "Streamlit"],
 };
 
 export type Project = {
@@ -133,7 +133,17 @@ export const skillCategories = [
   },
   {
     title: "Data Science / ML",
-    skills: ["PyTorch", "TensorFlow", "Scikit-learn", "SciPy", "Matplotlib"],
+    skills: [
+      "PyTorch",
+      "TensorFlow",
+      "Scikit-learn",
+      "Pandas / NumPy",
+      "NLP (Transformers)",
+      "Computer Vision (YOLO)",
+      "Streamlit",
+      "SciPy",
+      "Matplotlib",
+    ],
   },
 ];
 

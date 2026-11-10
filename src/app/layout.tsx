@@ -12,11 +12,11 @@ const vt323 = VT323({
 export const metadata: Metadata = {
   title: "System 26 — Vinayak Tiwari",
   description:
-    "Vinayak Tiwari's portfolio, imagined as a late-1990s desktop operating system. ML Engineer and Data Scientist.",
+    "Vinayak Tiwari's portfolio, reimagined as a Windows XP-style desktop. ML Engineer and Data Scientist.",
 };
 
 export const viewport: Viewport = {
-  themeColor: "#405c36",
+  themeColor: "#245edb",
   width: "device-width",
   initialScale: 1,
 };

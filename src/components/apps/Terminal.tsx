@@ -97,7 +97,7 @@ export function Terminal({ open, close, active }: AppCtx) {
 
   return (
     <div
-      className="pixel min-h-full cursor-text p-3 text-[19px] leading-[1.2] text-[#8ccf88]"
+      className="min-h-full cursor-text p-3 font-['Lucida_Console','Courier_New',monospace] text-[13px] leading-[1.35] text-[#c0c0c0]"
       onClick={() => inputRef.current?.focus()}
     >
       {lines.map((l, i) => (
@@ -133,7 +133,7 @@ export function Terminal({ open, close, active }: AppCtx) {
               setInput(i < 0 ? "" : history[i]);
             }
           }}
-          className="pixel min-w-0 flex-1 border-0 bg-transparent p-0 text-[19px] text-[#c9f0c5] caret-[#8ccf88] outline-none"
+          className="min-w-0 flex-1 border-0 bg-transparent p-0 font-[inherit] text-[13px] text-[#c0c0c0] caret-[#c0c0c0] outline-none"
           aria-label="Terminal input"
           autoComplete="off"
           spellCheck={false}
