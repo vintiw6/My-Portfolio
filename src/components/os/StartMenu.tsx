@@ -44,11 +44,6 @@ export function StartMenu({
       exit={{ opacity: 0, y: 12 }}
       transition={{ duration: 0.12 }}
     >
-      <div className="start-menu__rail" aria-hidden="true">
-        <span>
-          Vinayak<b>OS</b> 26
-        </span>
-      </div>
       <div className="start-menu__main">
         <div className="start-menu__head">
           <div className="avatar">VT</div>
@@ -60,7 +55,7 @@ export function StartMenu({
         <div className="start-menu__items">
           {ITEMS.map((id) => (
             <button key={id} role="menuitem" className="start-menu__item" onClick={() => onOpen(id)}>
-              <Icon name={APPS[id].icon} size={28} />
+              <Icon name={APPS[id].icon} size={32} />
               {APPS[id].label}
             </button>
           ))}
@@ -72,14 +67,13 @@ export function StartMenu({
             rel="noreferrer"
             onClick={onClose}
           >
-            <Icon name="resume" size={28} /> Resume.pdf
+            <Icon name="resume" size={32} /> Resume.pdf
           </a>
           <div className="start-menu__sep" />
           <button role="menuitem" className="start-menu__item" onClick={onShutdown}>
-            <Icon name="power" size={28} /> Shut Down...
+            <Icon name="power" size={32} /> Shut Down...
           </button>
         </div>
-        <div className="start-menu__footer">PERSONAL EDITION</div>
       </div>
     </motion.div>
   );

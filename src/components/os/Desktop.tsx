@@ -10,14 +10,21 @@ import { Taskbar } from "./Taskbar";
 import { Window, WinState } from "./Window";
 import { profile } from "@/lib/data";
 
-const TASKBAR_H = 48;
+const TASKBAR_H = 40;
 const BOOT_KEY = "vos-booted";
+// A random one is picked on every visit; the taskbar button cycles through them.
+const WALLPAPERS = [
+  "/wallpaper-cd.png",
+  "/wallpaper-console.png",
+  "/wallpaper-player.png",
+];
 
 export function Desktop() {
   const [booted, setBooted] = useState<boolean | null>(null);
   const [wins, setWins] = useState<WinState[]>([]);
   const [startOpen, setStartOpen] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
+  const [wp, setWp] = useState(0);
   const zTop = useRef(10);
   const coarse = useRef(false);
 
@@ -27,6 +34,7 @@ export function Desktop() {
     try {
       seen = sessionStorage.getItem(BOOT_KEY) === "1";
     } catch {}
+    setWp(Math.floor(Math.random() * WALLPAPERS.length));
     setBooted(seen);
     if (seen) openApp("welcome");
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -81,6 +89,8 @@ export function Desktop() {
     openApp("welcome");
   }, [openApp]);
 
+  const nextWallpaper = () => setWp((i) => (i + 1) % WALLPAPERS.length);
+
   const closeStart = useCallback(() => setStartOpen(false), []);
 
   const shutdown = () => {
@@ -100,11 +110,10 @@ export function Desktop() {
   if (booted === null) return <div className="boot" />;
 
   return (
-    <div className="desktop" onPointerDown={(e) => e.target === e.currentTarget && setSelected(null)}>
-      <div className="desktop__mark pixel" aria-hidden="true">
-        <h1>VinayakOS</h1>
-        <p>ML · Data · Personal Edition</p>
-      </div>
+    <div
+      className="desktop"
+      style={{ "--wallpaper": `url("${WALLPAPERS[wp]}")` } as React.CSSProperties}
+      onPointerDown={(e) => e.target === e.currentTarget && setSelected(null)}>
 
       <nav className="desktop__icons" aria-label="Desktop">
         {DESKTOP.map((item) => {
@@ -119,7 +128,7 @@ export function Desktop() {
               onDoubleClick={() => activate(item)}
               onKeyDown={(e) => e.key === "Enter" && activate(item)}
             >
-              <Icon name={icon} size={40} />
+              <Icon name={icon} size={48} />
               <span className="desk-icon__label">{label}</span>
             </button>
           );
@@ -168,6 +177,7 @@ export function Desktop() {
         startOpen={startOpen}
         onStart={() => setStartOpen((s) => !s)}
         onTask={onTask}
+        onWallpaper={nextWallpaper}
       />
 
       {!booted && <BootScreen onDone={finishBoot} />}

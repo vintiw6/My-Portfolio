@@ -1,7 +1,7 @@
-# VinayakOS 26
+# System 26
 
-Vinayak Tiwari's portfolio, reimagined as a late-1990s desktop operating system
-(sage-green desktop, cream bevelled windows, taskbar + Start menu, boot screen).
+Vinayak Tiwari's portfolio, reimagined as a Windows XP-style desktop operating system
+(Luna-blue windows, green hill wallpaper, taskbar + Start menu, boot screen).
 
 ## Run
 

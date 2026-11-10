@@ -8,7 +8,7 @@ const OPENABLE: AppId[] = ["welcome", "about", "projects", "skills", "experience
 
 export function Terminal({ open, close, active }: AppCtx) {
   const [lines, setLines] = useState<string[]>([
-    "VinayakOS 26 [Version 26.0.1]",
+    "System 26 [Version 26.0.1]",
     "Type 'help' for a list of commands.",
     "",
   ]);

@@ -10,7 +10,7 @@ const vt323 = VT323({
 });
 
 export const metadata: Metadata = {
-  title: "VinayakOS 26 — Vinayak Tiwari",
+  title: "System 26 — Vinayak Tiwari",
   description:
     "Vinayak Tiwari's portfolio, imagined as a late-1990s desktop operating system. ML Engineer and Data Scientist.",
 };

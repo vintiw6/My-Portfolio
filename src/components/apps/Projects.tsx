@@ -60,7 +60,7 @@ export function Projects() {
                 onDoubleClick={() => openProject(p)}
                 onKeyDown={(e) => e.key === "Enter" && openProject(p)}
               >
-                <Icon name={kindIcon[p.kind]} size={40} />
+                <Icon name={kindIcon[p.kind]} size={48} />
                 <span className="px-0.5">{p.title}</span>
               </button>
             ))}
@@ -86,7 +86,7 @@ function ProjectDetail({ p }: { p: Project }) {
   return (
     <div className="p-5">
       <div className="flex items-start gap-4">
-        <Icon name={kindIcon[p.kind]} size={56} className="flex-none" />
+        <Icon name={kindIcon[p.kind]} size={64} className="flex-none" />
         <div className="min-w-0">
           <h2 className="pixel m-0 text-[34px] font-normal leading-none">{p.title}</h2>
           <p className="m-0 mt-1 text-ink-mute">Type: {kindLabel[p.kind]}</p>

@@ -65,7 +65,7 @@ export function Window({
     const dx = e.clientX - d.px;
     const dy = e.clientY - d.py;
     const vw = window.innerWidth;
-    const vh = window.innerHeight - 48;
+    const vh = window.innerHeight - 40;
     if (d.mode === "move") {
       onChange({
         x: Math.min(Math.max(d.x + dx, 80 - d.w), vw - 80),
@@ -107,7 +107,7 @@ export function Window({
         onPointerCancel={end}
         onDoubleClick={onToggleMax}
       >
-        <Icon name={icon} size={18} />
+        <Icon name={icon} size={16} />
         <div className="titlebar__title">{title}</div>
         <button className="titlebar__btn" aria-label="Minimize" onClick={onMinimize}>
           <svg width="10" height="10" viewBox="0 0 10 10" shapeRendering="crispEdges"><rect x="1" y="7" width="7" height="2" fill="currentColor" /></svg>

@@ -6,14 +6,14 @@ export function About({ open }: AppCtx) {
   return (
     <div className="p-4">
       <div className="flex flex-wrap items-center gap-4 border-b border-[var(--face-3)] pb-4">
-        <div className="sunken grid h-[88px] w-[88px] flex-none place-items-center bg-[linear-gradient(#d4e3af,#8ca568)]">
+        <div className="sunken grid h-[88px] w-[88px] flex-none place-items-center bg-[linear-gradient(135deg,#ffd56a,#e5973a)]">
           <span className="pixel text-[52px] leading-none text-ink">VT</span>
         </div>
         <div className="min-w-0 flex-1">
           <h2 className="pixel m-0 text-[40px] font-normal leading-none">{profile.name}</h2>
           <p className="m-0 mt-1 text-ink-soft">{profile.role}</p>
-          <span className="mt-2 inline-flex items-center gap-1.5 border border-[var(--accent-ink)] bg-[#e6f5df] px-2 py-0.5 text-[12px] font-bold text-accent-ink">
-            <span className="inline-block h-2 w-2 rounded-full bg-[#5fb75a]" /> Open to Work
+          <span className="mt-2 inline-flex items-center gap-1.5 border border-[var(--accent-ink)] bg-[#e3eefc] px-2 py-0.5 text-[12px] font-bold text-accent-ink">
+            <span className="inline-block h-2 w-2 rounded-full bg-[#3fbf1e]" /> Open to Work
           </span>
         </div>
       </div>

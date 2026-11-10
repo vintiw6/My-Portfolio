@@ -29,7 +29,7 @@ export function Experience() {
               <tr key={e.role + e.org} className="border-b border-[var(--face-2)]">
                 <td className="px-2 py-2.5">
                   <span className="flex items-center gap-2 font-bold">
-                    <Icon name="experience" size={18} /> {e.role}
+                    <Icon name="experience" size={16} /> {e.role}
                   </span>
                 </td>
                 <td className="px-2 py-2.5">{e.org}</td>
@@ -37,7 +37,7 @@ export function Experience() {
                 <td className="px-2 py-2.5">
                   <span
                     className={`chip ${
-                      e.status === "Active" ? "!border-[var(--accent-ink)] !bg-[#e6f5df] !text-accent-ink" : ""
+                      e.status === "Active" ? "!border-[var(--accent-ink)] !bg-[#e3eefc] !text-accent-ink" : ""
                     }`}
                   >
                     {e.status}
@@ -49,7 +49,7 @@ export function Experience() {
         </table>
       </div>
       <p className="m-0 mt-3 text-ink-mute">
-        {experience.length} entries. Currently building research-grade ML pipelines.
+        {experience.length} entries. Most recently: research internship at IIIT Naya Raipur (completed June 2026).
       </p>
     </div>
   );

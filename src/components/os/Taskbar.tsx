@@ -10,11 +10,13 @@ export function Taskbar({
   startOpen,
   onStart,
   onTask,
+  onWallpaper,
 }: {
   tasks: Task[];
   startOpen: boolean;
   onStart: () => void;
   onTask: (id: string) => void;
+  onWallpaper: () => void;
 }) {
   const [time, setTime] = useState<string>("");
 
@@ -37,7 +39,7 @@ export function Taskbar({
           onStart();
         }}
       >
-        <Icon name="logo" size={24} />
+        <Icon name="logo" size={32} />
         <span className="taskbar__start-label">Start</span>
       </button>
       <div className="taskbar__divider" />
@@ -49,12 +51,20 @@ export function Taskbar({
             onClick={() => onTask(t.id)}
             title={t.title}
           >
-            <Icon name={t.icon} size={20} />
+            <Icon name={t.icon} size={16} />
             <span>{t.title}</span>
           </button>
         ))}
       </div>
       <div className="taskbar__tray">
+        <button className="taskbar__tray-btn" onClick={onWallpaper} aria-label="Change wallpaper" title="Change wallpaper">
+          <svg width="18" height="18" viewBox="0 0 18 18" shapeRendering="crispEdges" aria-hidden="true">
+            <rect x="1" y="3" width="16" height="12" fill="#ffffff" />
+            <rect x="2" y="4" width="14" height="10" fill="#3f86e6" />
+            <rect x="11" y="5" width="3" height="3" fill="#ffd56a" />
+            <path d="M2 14 L7 8 L10 11 L12 9 L16 13 L16 14 Z" fill="#4cb82a" />
+          </svg>
+        </button>
         <span className="taskbar__light" title="Open to work" />
         <span className="taskbar__clock" suppressHydrationWarning>
           {time}

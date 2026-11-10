@@ -11,12 +11,12 @@ export const profile = {
   bio: [
     "Hello! I'm Vinayak, an ML Engineer and Data Scientist specializing in training and implementing intelligent pipelines.",
     "I build end-to-end machine learning systems, deep learning models, and real-time scrapers that turn complex unstructured data into actionable insights and tools.",
-    "When I'm not tuning hyperparameters or optimizing training processes, I enjoy studying new AI research papers, participating in Kaggle challenges, and retro gaming.",
+    "Outside of work, I enjoy building small side projects, trying out new tools, and turning ideas into things people can actually use.",
   ],
   stats: [
     { label: "Level", value: "21" },
     { label: "Class", value: "Student" },
-    { label: "Experience", value: "6 Months" },
+    { label: "Experience", value: "8 Months" },
     { label: "Status", value: "Open to Work" },
   ],
   inventory: ["Python", "PyTorch", "TensorFlow", "Scikit-Learn", "NLP", "Streamlit"],
@@ -137,17 +137,17 @@ export const skillCategories = [
   },
 ];
 
-export const experience = [
+export const experience: { role: string; org: string; period: string; status: "Active" | "Completed" }[] = [
   {
     role: "Research Intern",
     org: "IIIT Naya Raipur",
-    period: "Feb 2026 – Present",
-    status: "Active" as const,
+    period: "Feb – Jun 2026",
+    status: "Completed",
   },
   {
     role: "Software Intern",
     org: "CSVTU Forte",
     period: "Apr – Jun 2025",
-    status: "Completed" as const,
+    status: "Completed",
   },
 ];

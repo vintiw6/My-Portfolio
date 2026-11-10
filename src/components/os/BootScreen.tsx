@@ -45,14 +45,14 @@ export function BootScreen({ onDone }: { onDone: () => void }) {
       onClick={() => ready && onDone()}
       role="button"
       tabIndex={0}
-      aria-label={ready ? "Start VinayakOS" : "Booting VinayakOS"}
+      aria-label={ready ? "Start System 26" : "Booting System 26"}
     >
       <div style={{ width: "100%", maxWidth: "48rem" }}>
         <div className="boot__log" aria-hidden="true">
           {lines.join("\n")}
         </div>
-        <h1 className="boot__title">VinayakOS 26</h1>
-        <p className="boot__edition">MACHINE LEARNING EDITION</p>
+        <h1 className="boot__title">System 26</h1>
+        <p className="boot__edition">Personal Edition</p>
         <div className="boot__loading">
           <div className="boot__progress">
             <div className="boot__fill" style={{ width: `${pct}%` }} />
