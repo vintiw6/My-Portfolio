@@ -1,36 +1,20 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VinayakOS 26
 
-## Getting Started
+Vinayak Tiwari's portfolio, reimagined as a late-1990s desktop operating system
+(sage-green desktop, cream bevelled windows, taskbar + Start menu, boot screen).
 
-First, run the development server:
+## Run
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev   # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Where things live
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `src/lib/data.ts` — all content (profile, projects, skills, experience). Edit this to update the site.
+- `src/components/os/` — the "OS": `Desktop` (window manager), `Window`, `Taskbar`, `StartMenu`, `BootScreen`, `Icon` (pixel SVG icons), `apps.tsx` (app registry: titles, sizes, desktop order).
+- `src/components/apps/` — one component per app: Welcome, About, Projects (file browser), Skills, Experience, Contact (mail composer), Snake, Terminal.
+- `src/app/globals.css` — theme tokens and all window/taskbar chrome.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The boot screen shows once per browser session; Start → Shut Down replays it.

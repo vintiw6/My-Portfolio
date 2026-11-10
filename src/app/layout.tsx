@@ -1,22 +1,24 @@
-import type { Metadata } from "next";
-import { Pixelify_Sans, JetBrains_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { VT323 } from "next/font/google";
 import "./globals.css";
 
-const pixelFont = Pixelify_Sans({
-  variable: "--font-pixel",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const monoFont = JetBrains_Mono({
-  variable: "--font-mono",
+const vt323 = VT323({
+  variable: "--font-vt323",
+  weight: "400",
   subsets: ["latin"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Vinayak's Portfolio",
-  description: "Pixel Art Interactive Portfolio",
+  title: "VinayakOS 26 — Vinayak Tiwari",
+  description:
+    "Vinayak Tiwari's portfolio, imagined as a late-1990s desktop operating system. ML Engineer and Data Scientist.",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#405c36",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -26,11 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${pixelFont.variable} ${monoFont.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={vt323.variable}>{children}</body>
     </html>
   );
 }
